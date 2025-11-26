@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Selectores CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="main-header" class="site-header">
+        <h1 class="logo">Mi Sitio Web</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="documento.pdf" class="nav-link pdf">Descargar PDF</a></li>
+                <li><a href="https://externo.com" class="nav-link external">Enlace externo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="intro-section">
+            <h2>Bienvenidos a nuestra página</h2>
+            <p class="intro-text">Este es el párrafo de introducción.</p>
+            <p>Este es otro párrafo en la sección de introducción.</p>
+
+            <div class="features">
+                <h3>Características principales</h3>
+                <ul class="features-list">
+                    <li class="feature-item">Rápido</li>
+                    <li class="feature-item importante">Seguro</li>
+                    <li class="feature-item">Eficiente</li>
+                    <li class="feature-item nuevo">Innovador</li>
+                    <li>Otro elemento sin clase</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>Nuestros Servicios</h2>
+
+            <article class="service-card destacado">
+                <h3>Diseño Web</h3>
+                <p class="service-description">Creamos sitios web modernos y responsive.</p>
+                <button class="btn btn-primary">Más información</button>
+            </article>
+
+            <article class="service-card">
+                <h3>Desarrollo App</h3>
+                <p class="service-description">Desarrollamos aplicaciones móviles nativas.</p>
+                <button class="btn btn-secondary">Más información</button>
+            </article>
+
+            <article class="service-card">
+                <h3>Consultoría</h3>
+                <p class="service-description">Asesoramiento técnico especializado.</p>
+                <button class="btn">Más información</button>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Noticias Recientes</h3>
+            <div class="news-item">
+                <h4>Nueva actualización disponible</h4>
+                <p>Hemos lanzado la versión 2.0 de nuestra plataforma.</p>
+                <span class="badge">Nuevo</span>
+            </div>
+            <div class="news-item">
+                <h4>Mantenimiento programado</h4>
+                <p>El sistema estará en mantenimiento este fin de semana.</p>
+                <span class="badge warning">Aviso</span>
+            </div>
+        </aside>
+    </main>
+
+    <section class="contact-section">
+        <h2>Formulario de Contacto</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="600000000">
+            </div>
+
+            <div class="form-group">
+                <label for="servicio">Servicio de interés:</label>
+                <select id="servicio" name="servicio">
+                    <option value="">Selecciona un servicio</option>
+                    <option value="web">Diseño Web</option>
+                    <option value="app">Desarrollo App</option>
+                    <option value="consultoria">Consultoría</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Suscribirme al newsletter</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">Enviar mensaje</button>
+                <button type="reset" class="btn btn-outline">Limpiar formulario</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="site-footer">
+        <p class="copyright">&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" class="social-link facebook">Facebook</a>
+            <a href="https://twitter.com" class="social-link twitter">Twitter</a>
+            <a href="https://instagram.com" class="social-link instagram">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+</html>

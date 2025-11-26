@@ -1,0 +1,108 @@
+/******* SELECTORES DE ETIQUETA **************/
+
+/* 1.1 - Todos los párrafos deben tener: */
+/* - Color de texto: #333 */
+/* - Tamaño de fuente: 1rem */
+/* - Interlineado: 1.6 */
+
+/* 1.2 - Todos los títulos h2 deben tener: */
+/* - Color: #2c3e50 */
+/* - Borde inferior: 2px sólido #3498db */
+/* - Padding inferior: 10px */
+
+/* 1.3 - Todas las listas no ordenadas deben: */
+/* - Quitar los puntos por defecto */
+/* - Padding izquierdo: 0 */
+
+/******* SELECTORES DE CLASE E ID **************/
+/* 2.1 - Los elementos con clase "destacado" deben tener: */
+/* - Fondo: #fff3cd */
+/* - Borde: 1px sólido #ffeaa7 */
+/* - Padding: 15px */
+
+/* 2.2 - El elemento con id "main-header" debe tener: */
+/* - Fondo: linear-gradient(135deg, #667eea 0%, #764ba2 100%) */
+/* - Color de texto: blanco */
+/* - Padding: 20px 0 */
+
+/* 2.3 - Los botones con clase "btn-primary" deben tener: */
+/* - Fondo: #3498db */
+/* - Color: blanco */
+/* - Borde: ninguno */
+/* - Padding: 10px 20px */
+
+/******* SELECTORES DE ATRIBUTO **************/
+/* 3.1 - Los inputs de tipo email deben tener: */
+/* - Borde: 2px sólido #3498db cuando tienen foco */
+/* - Fondo: #ecf0f1 */
+
+/* 3.2 - Los enlaces que terminen en ".pdf" deben: */
+/* - Tener fondo rojo (#e74c3c) */
+/* - Color blanco */
+/* - Padding: 5px 10px */
+/* - Mostrar el emoji "📄" después del texto */
+
+/* 3.3 - Los enlaces externos (que comiencen con "https") deben: */
+/* - Mostrar el emoji "🔗" después del texto */
+/* - Color: #e67e22 */
+
+/******* SELECTORES DE PSEUDOCLASES **************/
+/* 4.1 - Los enlaces de navegación al pasar el ratón deben: */
+/* - Cambiar color a #f39c12 */
+/* - Subrayarse */
+
+/* 4.2 - El primer elemento de cada lista debe: */
+/* - Tener la primera letra en mayúscula */
+/* - Peso de fuente: bold */
+
+/* 4.3 - Los elementos impares de las listas deben tener: */
+/* - Fondo: #f8f9fa */
+
+/* 4.4 - Los inputs cuando están en foco deben: */
+/* - Borde: 2px sólido #2980b9 */
+/* - Sombra: 0 0 5px rgba(52, 152, 219, 0.5) */
+
+/******* SELECTORES DE PSEUDOELEMENTOS **************/
+/* 5.1 - La primera línea del párrafo de introducción debe: */
+/* - Ser en negrita */
+/* - Tamaño de fuente: 1.1rem */
+
+/* 5.2 - La primera letra de cada h2 debe: */
+/* - Ser 2 veces más grande que el resto */
+/* - Color: #e74c3c */
+/* - Flotar a la izquierda */
+
+/* 5.3 - Después de los enlaces externos, añadir: */
+/* - Contenido: " (externo)" */
+/* - Color: #95a5a6 */
+/* - Tamaño de fuente: 0.8rem */
+
+/******* COMBINADORES **************/
+/* 6.1 - Los párrafos que siguen inmediatamente a un h2 deben: */
+/* - Texto en itálica */
+/* - Color: #7f8c8d */
+
+/* 6.2 - Todos los párrafos que son hermanos de h2 (vienen después) deben: */
+/* - Margen izquierdo: 20px */
+
+/* 6.3 - Los botones que están dentro de .service-card deben: */
+/* - Ancho: 100% */
+/* - Margen superior: 10px */
+
+/* 6.4 - Los elementos con clase "importante" dentro de .features-list deben: */
+/* - Color: #c0392b */
+/* - Peso de fuente: bold */
+
+/******* SELECTORES DE MÚLTIPLES Y ESPECIFIDAD **************/
+/* 7.1 - Los botones de éxito y primario deben: */
+/* - Radio de borde: 5px */
+/* - Transición: all 0.3s ease */
+
+/* 7.2 - Los badges de advertencia y los nuevos deben: */
+/* - Padding: 3px 8px */
+/* - Radio de borde: 12px */
+/* - Color blanco */
+
+/* 7.3 - Los enlaces de redes sociales (facebook, twitter, instagram) deben: */
+/* - Mostrar el icono correspondiente antes del texto */
+/* - Padding izquierdo: 25px */
