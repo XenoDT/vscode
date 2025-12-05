@@ -1,0 +1,176 @@
+/*Parte 1*/
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    display: flexbox;
+    justify-content: space-between;
+    align-items: flex-star;
+    gap: 20xp;
+    padding: 20px;
+}
+
+main section {
+    flex: 3;
+}
+
+main article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-ariticles article {
+    width: 220px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+aside {
+    flex: 1;
+    background-color: #fafafa;
+    padding: 20px;
+    border-left: 2px solid #ccc;
+}
+
+section:nth-of-type(2)>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+section:nth-of-type(2)>div>div {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer div a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: #444;
+    z-index: 1000;
+}
+
+/*Parte 2: Media Queries para Responsive*/
+@media (max-width: 768px) {
+
+    .main-articles {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .main-articles article {
+        width: 150px;
+    }
+
+    section:nth-of-type(2)>div {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    section:nth-of-type(2)>div>div {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        width: 80%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .main-articles {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .main-articles article {
+        width: 100%;
+    }
+
+    section:nth-of-type(2)>div {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    section:nth-of-type(2)>div>div {
+        width: 100%;
+    }
+
+
+    footer div {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    footer div a {
+        width: 80%;
+        display: block;
+        padding: 8px 0;
+    }
+}
