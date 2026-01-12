@@ -1,0 +1,726 @@
+/* Eliminamos márgenes y rellenos por defecto
+   y forzamos el modelo de caja estándar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aplica box-sizing también a pseudoelementos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Define el box-sizing base en html */
+html {
+    box-sizing: border-box;
+}
+
+/* Hereda box-sizing del elemento html */
+* {
+    box-sizing: inherit;
+}
+
+/* Fuente principal del sitio */
+body {
+    font-family: 'Pokemon Solid';
+}
+
+/* Contenedor principal del contenido */
+main {
+    background-color: #131313;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    min-height: 80vh;
+
+}
+
+/* Estilo para títulos principales */
+.h1 {
+    font-family: 'Pokemon Hollow';
+    text-align: center;
+}
+
+/* Contenedor principal de la barra de navegación */
+.navbar {
+    background-color: #dc143c;
+
+}
+
+/* Lista horizontal del menú */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Elementos de la lista */
+.navbar ul>li {
+    margin: 0;
+}
+
+/* Enlaces del menú */
+.navbar a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Efecto al pasar el ratón */
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Color para enlaces visitados */
+
+.navbar a:visited {
+    color: yellow;
+}
+
+/* Subrayado inferior para enlaces activos */
+#hoenn,
+#sinnoh,
+#kalos {
+    border-bottom: 3px solid #dc143c;
+    padding-bottom: 5px;
+    ;
+}
+
+/* Estilos para la barra lateral (aside) */
+.aside {
+    justify-content: left;
+    flex: 1;
+    background-color: #131313;
+    padding: 10px;
+    display: flex;
+    font-size: 0.85em;
+}
+
+/* Lista vertical en el aside */
+.aside ol {
+    background-color: #dc143c;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+/* Elementos de la lista en el aside */
+.aside li {
+    margin: 0;
+}
+
+/* Enlaces del aside  */
+.aside a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Efecto al pasar el ratón en el aside */
+.aside a:hover {
+    background-color: #555;
+}
+
+/* --- SECCIÓN HOENN --- */
+/* Estilos para la sección Hoenn */
+.hoenn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: lightgreen;
+    color: black;
+}
+
+/* Estilos para títulos en la sección Hoenn */
+.hoenn h2,
+.hoenn h3 {
+    text-align: center;
+    font-family: 'Pokemon Hollow';
+}
+
+/* Tamaño específico para títulos en Hoenn */
+.hoenn h2 {
+    font-size: 50px;
+}
+
+/* Lista horizontal en Hoenn */
+.hoenn ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Elementos de la lista en Hoenn */
+.hoenn li {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+/* .hoennlip {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+} */
+/* Estilos de tabla específicos para la sección Hoenn */
+.hoenn table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    border: 5px;
+    border-color: black;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+/* Filas pares con color de fondo diferente */
+.hoenn tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Multimedia centrada en Hoenn */
+.hoenn video,
+.hoenn iframe,
+.hoenn img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Párrafos con ancho máximo y justificados */
+.hoenn p {
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Color de selección de texto personalizado para Hoenn */
+.hoenn *::selection {
+    background-color: cyan;
+    color: #dc143c;
+}
+
+/* Estilos para las tablas en Hoenn */
+.hoenn tr,
+td {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: white;
+}
+
+/* Estilos para los encabezados de las tablas en Hoenn */
+.hoenn th {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/* Enlaces del apartado Hoenn */
+.hoenn a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para la galería de imágenes */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos para las imágenes dentro de la galería */
+.galeria img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre las imágenes de la galería */
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para la primera letra de los títulos h2 en las secciones */
+.hoenn h2::first-letter,
+.sinnoh h2::first-letter,
+.kalos h2::first-letter {
+    font-size: 1.5em;
+    color: #ffcb05;
+    /* Color amarillo Pokémon */
+    text-shadow: 2px 2px #3b4cca;
+}
+
+/* Estilos para el formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    /* Propiedad 1 */
+    border-radius: 8px;
+    /* Propiedad 2 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Propiedad 3 */
+    border: 2px solid #dc143c;
+    /* Propiedad 4 */
+    color: white;
+    /* Propiedad 5 */
+}
+
+/* Estilos para los campos de entrada del formulario */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: 3px solid yellow;
+    background-color: #444;
+}
+
+/* Estilos para los botones del formulario */
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #dc143c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Estilos para el pie de página  */
+.footer {
+    background-color: #dc143c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* --- DISEÑO RESPONSIVO --- */
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+
+
+    /* NAVBAR en columna */
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Enlaces de la NAVBAR más pequeños */
+    .navbar a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* ASIDE oculto en móviles */
+    .aside {
+        display: none;
+    }
+
+    /* HOENN ajustes */
+
+    .hoenn {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    /* Títulos más pequeños */
+    .hoenn h2 {
+        font-size: 28px;
+    }
+
+    /* Subtítulos más pequeños */
+    .hoenn h3 {
+        font-size: 20px;
+    }
+
+    /* Párrafos más pequeños y alineados a la izquierda */
+    .hoenn p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    /* Lista Hoenn en columna */
+    .hoenn ul {
+        flex-direction: column;
+    }
+
+    /* Galería: imágenes más pequeñas */
+    .galeria img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Tabla adaptable */
+    .hoenn table {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+/* Ajustes para tablets y pantallas medianas */
+@media (max-width: 768px) {
+
+    /* NAVBAR más compacta */
+    .navbar a {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+
+    /* ASIDE visible pero más estrecho */
+    .aside {
+        flex: 0.8;
+        padding: 5px;
+    }
+
+    /* Enlaces del ASIDE más pequeños */
+    .aside a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* HOENN ajustes intermedios */
+    .hoenn {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    /* Títulos Hoenn medianos */
+    .hoenn h2 {
+        font-size: 38px;
+    }
+
+    /* Subtítulos Hoenn medianos */
+    .hoenn h3 {
+        font-size: 24px;
+    }
+
+    /* Párrafos Hoenn medianos */
+    .hoenn p {
+        font-size: 15px;
+    }
+
+    /* Galería con menos espacio */
+    .galeria {
+        gap: 15px;
+    }
+
+    /* Imágenes de la galería medianas */
+    .galeria img {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+/* --- SECCIÓN SINNOH --- */
+/* Estilos para la sección Sinnoh */
+.sinnoh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #A9BDFF;
+    color: black;
+}
+
+/* Estilos para títulos en la sección Sinnoh */
+.sinnoh h2,
+.sinnoh h3 {
+    text-align: center;
+    font-family: 'Pokemon Hollow';
+}
+
+/* Tamaño específico para títulos en Sinnoh */
+.sinnoh h2 {
+    font-size: 50px;
+}
+
+/* Lista horizontal en Sinnoh */
+.sinnoh ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Elementos de la lista en Sinnoh */
+.sinnoh li {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+/*
+.sinnohlip {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+*/
+/* Estilos de tabla específicos para la sección Sinnoh */
+.sinnoh table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    border: 5px;
+    border-color: black;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+/* Filas pares con color de fondo diferente */
+.sinnoh tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Multimedia centrada en Sinnoh */
+.sinnoh video,
+.sinnoh iframe,
+.sinnoh img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Párrafos con ancho máximo y justificados */
+.sinnoh p {
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Color de selección de texto personalizado para Sinnoh */
+.sinnoh *::selection {
+    background-color: cyan;
+    color: #dc143c;
+}
+
+/* Estilos para las tablas en Sinnoh */
+.sinnoh tr,
+td {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: white;
+}
+
+/* Estilos para los encabezados de las tablas en Sinnoh */
+.sinnoh th {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/* Enlaces del apartado Sinnoh */
+.sinnoh a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* --- SECCIÓN KALOS --- */
+/* Estilos para la sección Kalos */
+.kalos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #FF1919;
+    color: black;
+}
+
+/* Estilos para títulos en la sección Kalos */
+.kalos h2,
+.kalos h3 {
+    text-align: center;
+    font-family: 'Pokemon Hollow';
+}
+
+/* Tamaño específico para títulos en Kalos */
+.kalos h2 {
+    font-size: 50px;
+}
+
+/* Lista horizontal en Kalos */
+.kalos ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Elementos de la lista en Kalos */
+.kalos li {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+/*
+.kaloslip {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+*/
+/* Estilos de tabla específicos para la sección Kalos */
+.kalos table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    border: 5px;
+    border-color: black;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+/* Filas pares con color de fondo diferente */
+.kalos tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Multimedia centrada en Kalos */
+.kalos video,
+.kalos iframe,
+.kalos img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Párrafos con ancho máximo y justificados */
+.kalos p {
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Color de selección de texto personalizado para Kalos */
+.kalos *::selection {
+    background-color: cyan;
+    color: #dc143c;
+}
+
+/* Estilos para las tablas en Kalos */
+.kalos tr,
+td {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: white;
+}
+
+/* Estilos para los encabezados de las tablas en Kalos */
+.kalos th {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/* Enlaces del apartado Kalos */
+.kalos a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Se aplica a imágenes, vídeos e iframes (PDFs) en las secciones de contenido */
+.hoenn img,
+.hoenn video,
+.hoenn iframe,
+.sinnoh img,
+.sinnoh video,
+.sinnoh iframe,
+.kalos img,
+.kalos video,
+.kalos iframe {
+    max-width: 100%;
+    /* Hace que sean responsivos */
+    height: auto;
+    /* Mantiene la proporción */
+    display: block;
+    /* Permite usar margin auto para centrar */
+    margin: 25px auto;
+    /* Espaciado arriba/abajo y centrado lateral */
+
+    /* Bordes estilizados */
+    border: 6px double #3b4cca;
+    /* Borde doble estilo clásico */
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+
+    /* Sombra para dar profundidad */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+    /* Transición suave para cuando pasas el ratón */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto opcional: resalta un poco al pasar el ratón */
+.hoenn img:hover,
+.hoenn video:hover,
+.sinnoh img:hover,
+.sinnoh video:hover,
+.kalos img:hover,
+.kalos video:hover {
+    transform: scale(1.02);
+}
+
+/* Tamaño específico para los IFRAME (PDF) para que se vean bien */
+iframe {
+    width: 90%;
+    min-height: 400px;
+}
