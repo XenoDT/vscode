@@ -1,0 +1,57 @@
+.rainbow-border {
+  position: relative;
+  padding: 12px;
+  border-radius: 14px;
+  background: white;
+}
+
+.rainbow-border::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    #ff0000,
+    #ff9900,
+    #ffee00,
+    #33ff00,
+    #00ffee,
+    #0066ff,
+    #9900ff,
+    #ff0000
+  );
+  background-size: 300% 300%;
+  animation: rainbow-smooth 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rainbow-smooth {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+.rainbow-text {
+  font-weight: 700;
+  background: linear-gradient(
+    120deg,
+    #ff0000,
+    #ff9900,
+    #ffee00,
+    #33ff00,
+    #00ffee,
+    #0066ff,
+    #9900ff,
+    #ff0000
+  );
+  background-size: 300% 300%;
+  animation: rainbow-text 6s linear infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes rainbow-text {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
