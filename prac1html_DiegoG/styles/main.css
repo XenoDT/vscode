@@ -29,15 +29,17 @@ body {
 }
 
 /* Contenedor principal del contenido */
-main {
+main{
     background-color: #131313;
     color: white;
     display: flex;
     flex-direction: row;
     min-height: 80vh;
-
+    flex: 1;
 }
-
+ol{
+    list-style: none;
+}
 /* Estilo para títulos principales */
 .h1 {
     font-family: 'Pokemon Hollow';
@@ -95,7 +97,7 @@ main {
 /* Estilos para la barra lateral (aside) */
 .aside {
     justify-content: left;
-    flex: 1;
+    flex: 0 0 70px;
     background-color: #131313;
     padding: 10px;
     display: flex;
@@ -128,7 +130,6 @@ main {
 .aside a:hover {
     background-color: #555;
 }
-
 /* --- SECCIÓN HOENN --- */
 /* Estilos para la sección Hoenn */
 .hoenn {
@@ -188,7 +189,6 @@ main {
     border-radius: 15px;
     background-color: gray;
 }
-
 /* Filas pares con color de fondo diferente */
 .hoenn tbody tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -280,21 +280,23 @@ td {
 /* Estilos para el formulario de contacto */
 form {
     display: flex;
-    flex-direction: column;
     gap: 15px;
     padding: 20px;
     background-color: #2a2a2a;
-    /* Propiedad 1 */
     border-radius: 8px;
-    /* Propiedad 2 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    /* Propiedad 3 */
     border: 2px solid #dc143c;
-    /* Propiedad 4 */
     color: white;
-    /* Propiedad 5 */
 }
-
+legend{
+    background-color: white;
+    border: black;
+    border-radius: 15px;
+    border-color: black;
+}
+input{
+    border-radius: 10px;
+}
 /* Estilos para los campos de entrada del formulario */
 input:focus,
 textarea:focus,
@@ -302,6 +304,7 @@ select:focus {
     outline: none;
     border: 3px solid yellow;
     background-color: #444;
+    color: white;
 }
 
 /* Estilos para los botones del formulario */
@@ -313,6 +316,7 @@ input[type="reset"] {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 50px;
 }
 
 /* Estilos para el pie de página  */
@@ -569,7 +573,7 @@ td {
     text-align: center;
     gap: 20px;
     padding: 20px;
-    background-color: #FF1919;
+    background-color: #27BBF5;
     color: black;
 }
 
@@ -688,24 +692,12 @@ td {
 .kalos video,
 .kalos iframe {
     max-width: 100%;
-    /* Hace que sean responsivos */
     height: auto;
-    /* Mantiene la proporción */
     display: block;
-    /* Permite usar margin auto para centrar */
     margin: 25px auto;
-    /* Espaciado arriba/abajo y centrado lateral */
-
-    /* Bordes estilizados */
     border: 6px double #3b4cca;
-    /* Borde doble estilo clásico */
     border-radius: 15px;
-    /* Esquinas redondeadas */
-
-    /* Sombra para dar profundidad */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-
-    /* Transición suave para cuando pasas el ratón */
     transition: transform 0.3s ease;
 }
 
