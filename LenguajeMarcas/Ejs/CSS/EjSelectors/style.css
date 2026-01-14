@@ -173,7 +173,9 @@ h2::first-letter {
 }
 
 
-a[href^="https"]::after {}
+a[href^="https"]::after {
+    color: #27ae60;
+}
 
 
 h2+p {
