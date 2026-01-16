@@ -52,7 +52,7 @@ tiene un color de fondo #2c3e50
 }
 .nav-list li{
     margin: 10px;
-    /* padding: 10px 15px 10px 15px; */
+    padding: 10px 15px 10px 15px;
     padding-top: 8px;
     padding-left: 2px;
     padding-right: 2px;
