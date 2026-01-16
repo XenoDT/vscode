@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library SYSTEM "Library.dtd">
+<library>
+    <book id="AA" available="yes" language="en" format="ebook">
+        <title>Reb de los pollos</title>
+        <author>
+            <firstname>Goku</firstname>
+            <lastname>Mario</lastname>
+            <nationality>Jp</nationality>
+        </author>
+        <publication>
+            <publisher>Norma</publisher>
+            <year>789</year>
+            <edition>2.2</edition>
+        </publication>
+        <genre main-genre="Shounen">Sheinen</genre>
+        <isbn>sdmfs0vf9uwe0vj0sdc</isbn>
+        <price currency="EUR" tax-included="no">20.99</price>
+        <description>No one will know</description>
+    </book>
+    <book id="Ac" available="yes" language="en" format="ebook">
+        <title>gjkpsdfg</title>
+        <author>
+            <firstname>Goku</firstname>
+            <lastname>Mario</lastname>
+            <nationality>Jp</nationality>
+        </author>
+        <publication>
+            <publisher>Norma</publisher>
+            <year>788</year>
+            <edition>2.3</edition>
+        </publication>
+        <genre main-genre="Shounen">Sheinen</genre>
+        <isbn>sdmfs0vf9uwe0vj0sdc</isbn>
+        <price currency="EUR" tax-included="no">21.99</price>
+        <description>No one will know</description>
+    </book>
+</library>
