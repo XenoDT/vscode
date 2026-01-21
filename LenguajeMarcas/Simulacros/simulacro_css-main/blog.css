@@ -206,7 +206,6 @@ body {
         margin-bottom: 2rem;
     }
 }
-
 @media (max-width: 480px) {
     .nav-list {
         flex-direction: column;

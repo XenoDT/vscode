@@ -1,0 +1,133 @@
+/* ========================= */
+/* PALETA DE COLORES         */
+/* ========================= */
+
+/* Fondo principal: negro o gris muy oscuro (#0a0a0f) */
+/* Color principal neón: cian eléctrico (#00ffff) */
+/* Color secundario: magenta neón (#ff00ff) */
+/* Color de acento: verde lima (#39ff14) */
+/* Texto principal: blanco suave (#eaeaea) */
+/* Texto secundario: gris claro (#b0b0b0) */
+
+
+/* ========================= */
+/* ESTILOS GENERALES         */
+/* ========================= */
+
+/* body:
+   - Fondo oscuro con sensación futurista
+   - Fuente sans-serif o monospace
+   - Texto claro para alto contraste */
+
+/* h1, h2, h3:
+   - Texto en mayúsculas
+   - Color neón
+   - Espaciado entre letras */
+
+/* p:
+   - Texto legible
+   - Color gris claro */
+
+
+/* ========================= */
+/* HEADER Y NAVEGACIÓN       */
+/* ========================= */
+
+/* header:
+   - Fondo oscuro
+   - Borde inferior con efecto neón */
+
+/* nav ul:
+   - Lista sin viñetas
+   - Elementos en línea */
+
+/* nav a:
+   - Color cian neón
+   - Sin subrayado */
+
+/* nav a:hover:
+   - Cambio a magenta
+   - Brillo ligero */
+
+
+/* ========================= */
+/* SECCIONES                 */
+/* ========================= */
+
+/* section:
+   - Separación vertical amplia
+   - Bordes finos con color neón */
+
+/* article:
+   - Fondo ligeramente más claro que el body
+   - Margen interno */
+
+
+/* ========================= */
+/* FORMULARIO                */
+/* ========================= */
+
+/* form:
+   - Fondo oscuro
+   - Borde neón */
+
+/* fieldset:
+   - Borde fino brillante
+   - Separación entre grupos */
+
+/* legend:
+   - Color magenta
+   - Texto en mayúsculas */
+
+/* label:
+   - Texto claro
+   - Display en bloque */
+
+/* input, select, textarea:
+   - Fondo negro
+   - Texto cian
+   - Borde neón */
+
+/* input:focus, select:focus, textarea:focus:
+   - Borde más brillante
+   - Sin outline por defecto */
+
+/* input[type="range"]:
+   - Color de acento verde */
+
+/* input[type="checkbox"], input[type="radio"]:
+   - Apariencia personalizada futurista */
+
+
+/* ========================= */
+/* BOTONES                   */
+/* ========================= */
+
+/* button:
+   - Fondo transparente
+   - Borde neón
+   - Texto en mayúsculas */
+
+/* button:hover:
+   - Fondo neón
+   - Texto oscuro */
+
+
+/* ========================= */
+/* FOOTER                    */
+/* ========================= */
+
+/* footer:
+   - Texto pequeño
+   - Color gris
+   - Línea superior sutil */
+
+
+/* ========================= */
+/* EFECTOS OPCIONALES        */
+/* ========================= */
+
+/* Efecto glow en textos importantes */
+/* Sombras suaves con color neón */
+/* Transiciones lentas para hover */
+/* Scrollbar personalizada estilo cyberpunk */

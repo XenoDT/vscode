@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon City | Contacto</title>
+    <meta name="description" content="Formulario de contacto avanzado - Neon City">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PROTOCOLO DE CONTACTO</h1>
+        <p>Formulario multifase · Canal encriptado</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="content.html">Contenido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Registro de Transmisión</h2>
+
+        <form action="#" method="post">
+
+            <!-- IDENTIDAD -->
+            <fieldset>
+                <legend>Identidad del Usuario</legend>
+
+                <label>
+                    Alias:
+                    <input type="text" name="alias" placeholder="ShadowRunner" required>
+                </label>
+
+                <br>
+
+                <label>
+                    Correo electrónico:
+                    <input type="email" name="email">
+                </label>
+
+                <br>
+
+                <label>
+                    ID de usuario:
+                    <input type="number" name="user_id" min="1">
+                </label>
+
+                <br>
+
+                <label>
+                    Fecha de registro:
+                    <input type="date" name="date">
+                </label>
+
+                <br>
+
+                <label>
+                    Hora de conexión:
+                    <input type="time" name="time">
+                </label>
+            </fieldset>
+
+            <!-- SEGURIDAD -->
+            <fieldset>
+                <legend>Seguridad</legend>
+
+                <label>
+                    Código de acceso:
+                    <input type="password" name="password" required>
+                </label>
+
+                <br>
+
+                <label>
+                    Nivel de acceso:
+                    <input type="range" name="access_level" min="1" max="10">
+                </label>
+
+                <br>
+
+                <label>
+                    Confirmar humano:
+                    <input type="checkbox" name="human">
+                    No soy un androide
+                </label>
+
+                <br>
+
+                <p>Tipo de conexión:</p>
+                <label>
+                    <input type="radio" name="connection" value="directa">
+                    Directa
+                </label>
+
+                <label>
+                    <input type="radio" name="connection" value="proxy">
+                    Proxy
+                </label>
+            </fieldset>
+
+            <!-- MENSAJE -->
+            <fieldset>
+                <legend>Mensaje</legend>
+
+                <label>
+                    Categoría:
+                    <select name="category">
+                        <option value="info">Información</option>
+                        <option value="alerta">Alerta</option>
+                        <option value="negocio">Negocio</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </label>
+
+                <br>
+
+                <label>
+                    Prioridad:
+                    <input list="prioridades" name="priority">
+                    <datalist id="prioridades">
+                        <option value="Baja">
+                        <option value="Media">
+                        <option value="Alta">
+                        <option value="Crítica">
+                    </datalist>
+                </label>
+
+                <br>
+
+                <label>
+                    Archivo adjunto:
+                    <input type="file" name="file">
+                </label>
+
+                <br>
+
+                <label>
+                    Mensaje:
+                    <textarea name="message" rows="5" cols="40" required></textarea>
+                </label>
+            </fieldset>
+
+            <!-- CONFIRMACION -->
+            <fieldset>
+                <legend>Confirmación</legend>
+
+                <label>
+                    Color de interfaz preferido:
+                    <input type="color" name="color">
+                </label>
+
+                <br>
+
+                <label>
+                    Acepto los términos de la red:
+                    <input type="checkbox" name="terms" required>
+                </label>
+
+                <br>
+
+                <label>
+                    Estado de transmisión:
+                    <output name="status">Pendiente</output>
+                </label>
+            </fieldset>
+
+            <!-- BOTONES -->
+            <fieldset>
+                <legend>Acciones</legend>
+
+                <button type="submit">Transmitir</button>
+                <button type="reset">Reiniciar</button>
+            </fieldset>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2077 Neon City Network</p>
+        <p>La información es poder</p>
+    </footer>
+
+</body>
+</html>
