@@ -1,6 +1,261 @@
-/* RESET BÁSICO */
-* {
+/* ==========================================================
+   1. FUNDAMENTOS (Basado en U3.1 y U3.2)
+   ========================================================== */
+
+/* Modelo de caja: border-box para control total de dimensiones (PDF 3.2, Cap 1.1) */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Variables y Herencia (PDF 3.1, Cap 4.4.1) */
+:root {
+    --bg-dark: #0a0a0f;
+    --neon-cyan: #00ffff;
+    --neon-magenta: #ff00ff;
+    --neon-green: #39ff14;
+    --text-main: #eaeaea;
+    --text-dim: #b0b0b0;
+    --font-cyber: 'Courier New', Courier, monospace;
+}
+
+html {
+    /* Unidades relativas: 1rem = 16px (PDF 3.1, Cap 3.2) */
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-cyber);
+    line-height: 1.6; /* Propiedad heredable */
+    overflow-x: hidden; /* Control de desbordamiento (PDF 3.2, Cap 1.4) */
+}
+
+/* ==========================================================
+   2. SELECTORES DE ELEMENTOS (PDF 3.1, Cap 4.1.1)
+   ========================================================== */
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+p {
+    color: var(--text-dim);
+    margin-bottom: 1em;
+}
+
+/* Estilos de lista (PDF 3.2, Cap 2.2) */
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+/* ==========================================================
+   3. IDENTIFICADORES ESPECÍFICOS (Selectores #id)
+   ========================================================== */
+
+#main-header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-bottom: 2px solid var(--neon-cyan);
+    text-align: center;
+    position: sticky; /* Posicionamiento (PDF 3.2, Cap 1.5.2) */
+    top: 0;
+    z-index: 1000;
+}
+
+#hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, transparent, #111);
+}
+
+#about, #districts, #net, #contact, #logs, #news, #files {
+    padding: 4rem 10%;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+/* ==========================================================
+   4. CLASES Y COMPONENTES (Selectores .clase)
+   ========================================================== */
+
+/* Basado en la estructura de los HTML proporcionados */
+article {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--neon-green);
+    transition: transform 0.3s ease; /* Propiedad de transición */
+}
+
+article:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* Navegación */
+nav ul {
+    display: flex; /* Flexbox (PDF 3.2, Cap 3) */
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: var(--neon-cyan);
+    text-decoration: none; /* PDF 3.2, Cap 2.1.2 */
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--neon-magenta);
+    text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+/* ==========================================================
+   5. FORMULARIOS (PDF 3.2 y Estructura contac.html)
+   ========================================================== */
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 1px solid var(--neon-cyan);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    color: var(--neon-magenta);
+    padding: 0 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+label {
+    display: block; /* PDF 3.2, Cap 1.3.1 */
+    margin-top: 1rem;
+    color: var(--text-main);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #000;
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-green);
+    margin-top: 0.5rem;
+}
+
+input:focus, textarea:focus {
+    outline: none; /* PDF 3.2, Cap 1.3.3 */
+    border-color: var(--neon-magenta);
+    box-shadow: 0 0 10px var(--neon-magenta);
+}
+
+/* Botones con display inline-block (PDF 3.2, Cap 1.3.3) */
+button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: inherit;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-dark);
+}
+
+button[type="reset"] {
+    border-color: var(--text-dim);
+    color: var(--text-dim);
+}
+
+
+/* Footer (Propiedades finales) */
+footer {
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    border-top: 1px solid var(--neon-magenta);
+}
+.aside{
+    justify-content: left;
+    flex: 0 0 30px;
+    background-color: #0a0a0f;
+    padding: 10px;
+    display: flex;
+    position: fixed;
+    right: 0px;
+    border-left: var(--neon-cyan);
+    box-shadow: 0 0 8px var(--neon-cyan);
+    border-style: solid;
+}
+.aside ul{
+    background-color: #111;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.aside li{
+    margin: 0;
+}
+.aside a:hover{
+    background-color: #00ffff;
+    color: var(--neon-magenta);
+    text-decoration: underline;
+    text-shadow: 0 0 8px var(--neon-magenta);
+}
+.aside a{
+    font-family: var(--font-cyber);
+    font: bold;
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+/* ==========================================================
+   6. RESPONSIVE DESIGN (Media Queries - PDF 3.2, Cap 3.3)
+   ========================================================== */
+
+/* Tablets y móviles */
+@media (max-width: 768px),(max-width: 480px)  {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #main-header{
+        position: relative;
+    }
+    
+    #hero {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+    .aside{
+        display: none;
+    }
 }
