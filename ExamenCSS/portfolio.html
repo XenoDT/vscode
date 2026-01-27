@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ejercicio CSS</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header class="portfolio-header">
+        <div class="header-wrapper">
+            <div class="personal-brand">
+                <h1>Ana García</h1>
+                <p class="profession">Diseñadora UX/UI & Frontend Developer</p>
+            </div>
+            <nav class="portfolio-nav">
+                <ul class="menu">
+                    <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#proyectos"><i class="fas fa-briefcase"></i> Proyectos</a></li>
+                    <li><a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a></li>
+                    <li><a href="#habilidades"><i class="fas fa-code"></i> Habilidades</a></li>
+                    <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="portfolio-container">
+        <main class="portfolio-main">
+            <section class="projects" id="proyectos">
+                <h2><i class="fas fa-rocket"></i> Proyectos Destacados</h2>
+                <div class="project-card">
+                    <h3>E-commerce Responsive</h3>
+                    <p class="tech">HTML5, CSS3, JavaScript</p>
+                    <p>Tienda online completamente responsive con carrito de compras</p>
+                </div>
+                <div class="project-card">
+                    <h3>App Clima</h3>
+                    <p class="tech">React, API Rest</p>
+                    <p>Aplicación de pronóstico del tiempo con geolocalización</p>
+                </div>
+                <div class="project-card">
+                    <h3>Red Social</h3>
+                    <p class="tech">Vue.js, Firebase</p>
+                    <p>Plataforma social con autenticación y chat en tiempo real</p>
+                </div>
+            </section>
+
+            <section class="about-me" id="sobre-mi">
+                <h2><i class="fas fa-heart"></i> Mi Filosofía</h2>
+                <p class="about-me-p">Creo en el diseño centrado en el usuario y en escribir código limpio y mantenible. Me apasiona crear experiencias digitales que sean tanto bellas como funcionales.</p>
+                <p class="about-me-p">Con más de 5 años de experiencia en el sector, he trabajado con startups y grandes empresas, siempre buscando superar expectativas.</p>
+            </section>
+        </main>
+
+        <aside class="portfolio-sidebar">
+            <div class="skills" id="habilidades">
+                <h3><i class="fas fa-star"></i> Habilidades Técnicas</h3>
+                <div class="skill">
+                    <span>HTML/CSS</span>
+                    <div class="skill-bar"></div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="skill-bar"></div>
+                </div>
+                <div class="skill">
+                    <span>React</span>
+                    <div class="skill-bar"></div>
+                </div>
+                <div class="skill">
+                    <span>UI/UX Design</span>
+                    <div class="skill-bar"></div>
+                </div>
+            </div>
+
+            <div class="contact-info" id="contacto">
+                <h3>Contacto Rápido</h3>
+                <p>ana@portfolio.com</p>
+                <p>+34 600 123 456</p>
+                <p>Madrid, España</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Mastodon</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="portfolio-footer">
+        <div class="footer-wrapper">
+            <p>&copy; 2024 Ana García. Portfolio Personal.</p>
+            <p class="footer-note">Diseñado con <i class="fas fa-heart"></i> y mucho CSS</p>
+        </div>
+    </footer>
+</body>
+</html>

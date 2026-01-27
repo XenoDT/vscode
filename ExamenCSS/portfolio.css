@@ -1,0 +1,261 @@
+/* NORMAS DEL EXAMEN:
+- Durante la realización de este examen no puedes utilizar internet. Sí puedes utilizar apuntes y proyectos propios.
+- Respeta la nomenclatura solicitada y el funcionamiento. De no cumplirse este requisito, no se corregirá dicho ejercicio.
+- Si se detecta cualquier copia o medio no lícito, el examen será calificado con un 0.
+*/
+
+/* 
+INSTRUCCIONES:
+La finalidad del examen es que imites el resultado final de la página que se muestra en la pantalla y se adjunta en las imágenes. Para ello, debes completar este fichero css con las reglas que necesites.
+
+Mantén el orden del css. Cada regla debe ir en el apartado correcto. De no ser así, se restará algo de nota en ese ítem.
+
+En este mismo css vienen colores y otras instrucciones, pero no se detallan márgenes, paddings, borders, alturas de línea, tamaños de letra, etc. Tienes que poner los que consideres para que el resultado final sea lo más parecido posible.
+
+Entrega únicamente este fichero css.
+
+CALIFICACIÓN:
+En cada apartado puedes ver la puntuación de cada parte.
+*/
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*************** BODY (0,25 puntos) ***************/
+/*
+- Fuente de la familia Segoe UI, y, si no, alguna de su misma familia (sans serif).
+- Color de fondo: un gradiente que va hacia la derecha, del color f5f7fa al #c3cfe2
+- Color de la fuente: #333
+*/
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right,#f5f7fa,#c3cfe2);
+    color: #333;
+}
+
+/*************** CABECERA (1 punto) ***************/
+/*
+- El color de fondo de la cabecera: gradiente hacia la derecha de #6a11cb a #2575fc
+- Color de la letra blanco
+- Posición sticky cuando llegue arriba del todo de la pantalla.
+- La cabecera tiene una sombra solamente hacia abajo y algo difuminada de color rgba(106, 17, 203, 0.3)
+- El contenido de la cabecera tiene un ancho máximo de 1200px
+- El texto "Ana García"  tiene una sombra de color rgba(0, 0, 0, 0.2)
+- El texto de la profesión es blanco pero con un poquito de transparencia
+*/
+.portfolio-header{
+    background: linear-gradient(to right, #6a11cb,#2575fc);
+    color: white;
+    position: sticky;
+    padding: 1em;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-around;    
+}
+.personal-brand{
+    max-width: 1200px;
+    padding: 10px;
+    text-shadow: rgb(0,0,0, 0.2);
+}
+.profession{
+    max-width: 1200px;
+    margin-top: 8px;
+    color: rgb(255,255,255, 0.9);
+}
+
+/*************** NAVEGACIÓN (0,5 puntos) ***************/
+/*
+- El color de fondo de los botones del menú es blanco muy transparente, y el texto en negrita
+- Cuando el ratón pasa por encima: es algo menos transparente y se le pone una sombra hacia abajo y difuminada de color rgba(0, 0, 0, 0.2);
+*/
+.portfolio-nav{
+    display: flex;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 50px;
+    padding: 1rem;
+    margin: 1rem;
+}
+.menu li:hover{
+    background-color: rgb(255,255,255, 0.3);
+    text-shadow: 0 2px 2px;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
+/*************** CONTENEDOR PRINCIPAL (0,5 puntos) ***************/
+/*
+- El main ocupa 2/3, el aside ocupa 1/3.
+- Las cajas de proyectos, habilidades, contacto y mi filosofía tienen una sombra hacia abajo negra y muy transparente.
+*/
+main{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    flex: 1;
+}
+.portfolio-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: felx-start;
+    padding: 20px;
+    margin: 20px;
+    gap: 2em;
+}
+
+
+/* PROYECTOS DESTACADOS:(1,25 puntos)
+- El color de fondo es blanco
+- El color del título es #6a11cb y es casi el doble de tamaño de la letra normal
+- Tiene una sombra solo hacia abajo negra, un poco transparete y algo difuminada.
+- "Proyectos destacados" tiene un color #6a11cb y es casi el doble de tamaño de la letra normal
+- Cada uno de los proyectos tiene un fondo #f8f9ff. El color de la izquierda es #2575fc
+- Cuando se pasa el ratón por encima de cada proyecto, se le pone una sombra solo hacia abajo, difuminada, de color rgba(37, 117, 252, 0.15)
+- Los textos de las tecnologías tienen color #6a11cb, en negrita, y ligeramente más pequeños que la letra normal
+- */
+#proyectos{
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+}
+.projects h2{
+    color: #6a11cb;
+    text-shadow: 0 2px 2px rgb(0,0,0, 0.1);
+}
+.project-card{
+    margin: 1rem;
+    background-color: #f8f9ff;
+    border-left: solid #2575fc;
+    border-radius: 10px;
+    padding: 30px;
+}
+.project-card:hover{
+    box-shadow: 0 2px 2px 2px rgba(37, 117, 252, 0.15);
+}
+.tech{
+    color: #6a11cb;
+    font-weight: bold;
+    font-size: smaller;
+}
+/* MI FILOSOFÍA: (1 punto)
+- Color de fondo blanco y sombra como se indicaba arriba.
+- La primera línea de cada párrafo es de color #6a11cb, el mismo color que el título
+*/
+.about-me{
+    border-radius: 15px;
+    background-color: white;   
+    padding: 30px;
+}
+.about-me-p::first-line{
+    color: #6a11cb;
+}
+.about-me h2{
+    color: #6a11cb;
+    text-shadow: 0 2px 2px rgb(0,0,0, 0.1);
+}
+/* SIDEBAR: (1 punto)
+- Ocupa 1/3 del ancho
+- 
+*/
+/* SIDEBAR: (1 puntos)
+- Ocupa 1/4
+- Habilidades tiene color de fondo blanco.
+- El título de habilidades tiene color #6a11cb
+- Las skills tienen un color de fuente #444, y las barras de abajo tienen color #e0e0e0
+
+- Contacto tiene un color de fondo gradiente hacia abajo y hacia la derecha, del color #6a11cb al #2575fc
+- La fuente es blanca
+- Al pasar el ratón sobre los enlaces de GitHub, LinkedIn... tienen color de fondo blanco y de letra  #6a11cb
+
+*/
+#habilidades{
+    border-radius: 15px;
+    background-color: white;
+    padding: 30px;
+}
+#habilidades h3 {
+    color: #6a11cb;
+}
+.skill{
+    padding: 30px;
+    color: #444;
+}
+.skill div{
+    border-radius: 15px;
+    border: 6px solid #e0e0e0;
+}
+#contacto{
+    background: linear-gradient(to top, #2575fc, #6a11cb);
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+}
+#contacto p{
+    padding: 15px;
+}
+#contacto a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    width: 30%;
+    border-radius: 5px;
+}
+.social-links{
+    text-align: center;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+#contacto a:hover{
+    background-color: white;
+    color: #6a11cb;
+    text-decoration: underline;
+}
+/*************** PIE (0,5 punto) ***************/
+/*
+- El color de fondo es #2d3748 y el texto blanco. El texto de "diseñado..." es color #a0aec0.
+*/
+.portfolio-footer{
+    background-color: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+.footer-note{
+    color: #a0aec0;
+}
+
+/*************** MEDIA QUERY (1 punto) ***************/
+/* ANCHO MÁXIMO DE 1000px:
+- El header deja de ser sticky y pasa a ser normal
+- El título "Ana García" y profesión son más pequeños.
+- Los botones se juntan y su letra es más pequeña y no en negrita.
+- El aside y el main se ponen uno debajo del otro (primero el aside, después el main)
+- "Habilidades" está al lado de "Contacto" hasta que dejan de caber por el tamaño de la página, en ese momento cupón baja. Habilidades y Contacto tienen un ancho mínimo de 300px.
+*/
+/* @media (max-width: 768px),(max-width: 480px){
+    aside{
+        fle
+    }
+} */

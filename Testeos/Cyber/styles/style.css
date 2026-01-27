@@ -210,7 +210,7 @@ footer {
     position: fixed;
     right: 0px;
     border-left: var(--neon-cyan);
-    box-shadow: 0 0 8px var(--neon-cyan);
+    box-shadow: 0 0 8px 0  var(--neon-cyan);
     border-style: solid;
 }
 .aside ul{

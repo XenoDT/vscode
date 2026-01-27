@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bin/bash
 
 read -p "introduce un numero, este seran los segundos" sec;
  
@@ -10,8 +10,8 @@ read -p "introduce un numero, este seran los segundos" sec;
  sec_s=$(date +%S)
  
  sec_F=$((sec_s + sec))
- min_f=$min_s
- hora_F=$hora_s
+ min_f=$min
+ hora_F=$hora
 
  while (( sec_F >= 60)); do
     sec_F=$((sec_F - 60))

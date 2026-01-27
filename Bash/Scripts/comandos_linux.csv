@@ -1,0 +1,57 @@
+Categoria;Comando;Opciones;Descripcion
+Iniciales;clear;;Limpia la pantalla de la terminal
+Iniciales;date;-s "<fecha>" , +"<formato>";Muestra o establece la fecha y hora del sistema
+Iniciales;exit;<codigo>;Cierra la sesión o finaliza un script con código de salida
+Iniciales;history;-c , -d N , -w;Muestra y gestiona el historial de comandos
+Iniciales;logout;;Cierra la sesión actual del usuario
+Iniciales;lshw;-short , -class <clase> , -json;Muestra información detallada del hardware
+Iniciales;reboot;-f , -p;Reinicia el sistema
+Iniciales;shutdown;now , -h , -r , -c , +<min> , HH:MM;Apaga o reinicia el sistema de forma inmediata o programada
+Iniciales;uname;-a , -s , -n , -r , -v , -m , -o;Muestra información del kernel y arquitectura
+Iniciales;who;-H , -i , -u , -m;Muestra los usuarios conectados
+Iniciales;whoami;;Muestra el usuario efectivo actual
+Iniciales;man;-f , -k , -S <seccion>;Muestra y busca páginas del manual
+Iniciales;apropos;<palabra_clave>;Busca comandos relacionados con una palabra clave
+Archivos y Directorios;cd;-L , -P;Cambia el directorio de trabajo
+Archivos y Directorios;cp;-d , -i , -R , -u;Copia archivos y directorios
+Archivos y Directorios;find;-name , -type , -size , -mtime , -user , -exec , -maxdepth , -mindepth;Busca archivos y directorios según criterios
+Archivos y Directorios;ln;-i , -s;Crea enlaces duros o simbólicos
+Archivos y Directorios;ls;-a , -l , -R;Lista archivos y directorios
+Archivos y Directorios;mkdir;-m , -p;Crea directorios
+Archivos y Directorios;mv;-f , -i , -u;Mueve o renombra archivos
+Archivos y Directorios;pwd;-L , -P;Muestra la ruta del directorio actual
+Archivos y Directorios;rm;-f , -i , -r;Elimina archivos y directorios
+Archivos y Directorios;rmdir;-p;Elimina directorios vacíos
+Archivos y Directorios;stat;-t , -f , -x;Muestra información detallada de un archivo
+Archivos y Directorios;touch;;Crea archivos vacíos o actualiza marcas de tiempo
+Archivos y Directorios;whereis;-b , -m , -s;Localiza binarios, manuales y fuentes
+Texto;cat;;Muestra o concatena archivos
+Texto;grep;-i , -v , -n , -r , -E , -w , -A , -B , -C;Busca patrones dentro de texto
+Texto;head;-n , -c;Muestra las primeras líneas o bytes
+Texto;tail;-n , -f;Muestra las últimas líneas o sigue cambios
+Texto;sort;-n , -r , -u , -k , -t;Ordena líneas de texto
+Texto;wc;-l , -w , -c , -m;Cuenta líneas, palabras y caracteres
+Usuarios y Grupos;chgrp;-R;Cambia el grupo propietario
+Usuarios y Grupos;chown;-R , --from;Cambia propietario y grupo
+Usuarios y Grupos;id;;Muestra UID, GID y grupos
+Usuarios y Grupos;passwd;;Cambia la contraseña
+Usuarios y Grupos;su;;Cambia de usuario
+Usuarios y Grupos;sudo;-i , -u , -k;Ejecuta comandos como otro usuario
+Usuarios y Grupos;useradd;-m , -d , -s , -g , -G , -u;Crea un usuario
+Usuarios y Grupos;userdel;-r;Elimina un usuario
+Usuarios y Grupos;groupadd;-r , -f;Crea un grupo
+Usuarios y Grupos;groupdel;;Elimina un grupo
+Procesos;bg;;Reanuda un proceso en segundo plano
+Procesos;fg;%N;Trae un proceso al primer plano
+Procesos;jobs;;Lista procesos en segundo plano
+Procesos;htop;;Monitor interactivo de procesos
+Procesos;ps;;Muestra procesos en ejecución
+Procesos;pstree;-p , -u , -a;Muestra procesos en forma de árbol
+Procesos;kill;-l , <señal>;Envía señales a procesos
+Procesos;killall;-9 , -15;Envía señales a procesos por nombre
+Procesos;nice;-n;Ejecuta procesos con prioridad
+Procesos;renice;-p , -u;Cambia la prioridad de procesos
+Procesos;time;;Mide el tiempo de ejecución
+Procesos;nohup;;Ejecuta comandos que continúan tras cerrar sesión
+Procesos;sleep;;Pausa la ejecución
+Procesos;&;;Ejecuta un comando en segundo plano
