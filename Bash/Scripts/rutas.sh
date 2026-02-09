@@ -9,4 +9,4 @@ while true; do
     break
 done
 
-total=0
+grep -f lista_log.txt ERROR > errors.txt
