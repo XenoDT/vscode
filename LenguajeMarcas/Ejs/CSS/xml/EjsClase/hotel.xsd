@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tierno.es/hotel"
+    xmlns:tns="http://tierno.es/hotel"
+    elementFormDefault="qualified">
+    
+    <xs:element name="bookings">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="booking" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="checkinDate" type="xs:date"/>
+                            <xs:element name="checkoutDate" type="xs:date" />
+                            <xs:element name="guest">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="name" type="xs:string" />
+                                        <xs:element name="email" type="xs:string" />
+                                        <xs:element name="phone" type="xs:integer" />
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="roomType" type="tns:RoomType"/>
+                            <xs:element name="service" maxOccurs="unbounded" type="xs:string"/>
+                            <xs:element name="totalPrice" type="xs:decimal" />
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="RoomType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="indidual"/>
+            <xs:enumeration value="doble"/>
+            <xs:enumeration value="suite"/>
+            <xs:enumeration value="familiar"/>
+        </xs:restriction>
+    </xs:simpleType>
+     <xs:simpleType name="ServiceType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="desayuno"/>
+            <xs:enumeration value="spa"/>
+            <xs:enumeration value="parking"/>
+            <xs:enumeration value="familiar"/>
+        </xs:restriction>
+    </xs:simpleType
+</xs:schema>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE library SYSTEM "Library.dtd">
 <library>
-    <book id="AA" available="yes" language="en" format="ebook">
+    <book id="AA" available="no" format="ebook">
         <title>Reb de los pollos</title>
         <author>
             <firstname>Goku</firstname>
@@ -18,7 +18,7 @@
         <price currency="EUR" tax-included="no">20.99</price>
         <description>No one will know</description>
     </book>
-    <book id="Ac" available="yes" language="en" format="ebook">
+    <book id="Ac" language="es" format="ebook">
         <title>gjkpsdfg</title>
         <author>
             <firstname>Goku</firstname>

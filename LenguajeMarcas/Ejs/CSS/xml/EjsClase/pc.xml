@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pc xmlns="http://tierno.es/pc"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://tierno.es/pc pc.xsd">
+    <processor brand="intel" hz="5Ghz"></processor>
+    <keyboard lang="es">Logitech</keyboard>
+    <speaker>
+        <power>2</power>
+        <material>plastic</material>
+    </speaker>
+    <ram-slots type="DDR5">
+        <ram>6</ram>
+        <ram>8</ram>
+    </ram-slots>
+    <screen>
+        <inches>19.1</inches>
+        <resolution>5</resolution>
+    </screen>
+    <display>
+        <inches>4</inches> 
+        <resolution>2</resolution>
+    </display>
+</pc>

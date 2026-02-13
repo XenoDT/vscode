@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars xmlns="https://tierno" xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+    xsi:schemaLocation="https://tierno.es cars.xsd">
+    <brand>Renault</brand>
+    <model>Megane</model>
+    <manual></manual>
+    <plate material="plastico">5476KGH</plate>
+</cars>

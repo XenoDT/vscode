@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order xmlns="http://tierno.es/online-order"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://tierno.es/online-order online-order.xsd">
+    <orderNumber>a5</orderNumber>
+    <orderDate>2002-05-30T09:00:00</orderDate>
+    <customer>
+        <fullName>Mariano Gonzalez</fullName>
+        <email>Mariano.Gonzalez@MAGO.nez</email>
+        <digitalDelivery>si</digitalDelivery>
+    </customer>
+    <products>
+        <product type="physical">
+            <productCode>a1</productCode>
+            <description>gjjsg</description>
+            <unitPrice>2.5</unitPrice>
+            <quantity>2</quantity>
+            <discount>1</discount>
+        </product>
+        <product type="digital">
+            <productCode>a01</productCode>
+            <description>gdas</description>
+            <unitPrice>540</unitPrice>
+            <quantity>540</quantity>
+            <discount>90</discount>
+        </product>
+        <product type="physical">
+            <productCode>a78</productCode>
+            <description>vfhks</description>
+            <unitPrice>50</unitPrice>
+            <quantity>40</quantity>
+            <discount>50</discount>
+        </product>
+        <product type="digital">
+            <productCode>z01</productCode>
+            <description>gjdgk</description>
+            <unitPrice>30</unitPrice>
+            <quantity>5</quantity>
+            <discount>90</discount>
+        </product>
+    </products>
+    <payment>
+        <method>creditCard</method>
+        <totalAmount>1000000</totalAmount>
+        <shippingCost>200</shippingCost>
+    </payment>
+</order>

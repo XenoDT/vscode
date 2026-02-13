@@ -1,0 +1,51 @@
+<!ELEMENT university_library (department+,library_services)>
+
+<!ELEMENT department (course+)>
+<!ELEMENT library_services (service+)>
+
+<!ELEMENT course (course_name,required_textbooks,recommended_readings)>
+<!ELEMENT required_textbooks (textbook+)>
+<!ELEMENT course_name (#PCDATA)>
+<!ELEMENT textbook (title,authors,edition,publisher,year,library_copies)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT authors (author+)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT edition (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT library_copies (#PCDATA)>
+<!ELEMENT recommended_readings (online_resource)>
+<!ELEMENT online_resource (title,url)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT service (service_name,available_to,max_items_per_month,fee)>
+<!ELEMENT service_name (#PCDATA)>
+<!ELEMENT available_to (#PCDATA)>
+<!ELEMENT max_items_per_month (#PCDATA)>
+<!ELEMENT fee (#PCDATA)>
+<!ATTLIST department
+    name CDATA #REQUIRED
+    code ID #REQUIRED
+>
+<!ATTLIST course
+    course_id ID #REQUIRED
+>
+<!ATTLIST textbook
+    isbn CDATA #REQUIRED
+    format (physical | digital) #REQUIRED
+>
+<!ATTLIST library_copies
+    total CDATA "0"
+    available CDATA "0"
+    reserved CDATA "0"
+>
+<!ATTLIST online_resource 
+    access_type CDATA "free"    
+>
+<!ATTLIST service
+    service_id CDATA "something"
+>
+<!ATTLIST fee 
+    currency (EUR|USD|LB) "EUR" 
+>
+<!ENTITY library-name "City Central Library">
+<!ENTITY default-currency "EUR">

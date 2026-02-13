@@ -1,0 +1,88 @@
+  Fichero: /usr/share/man/man1/grep.1.gz
+  Tamaño: 10950     	Bloques: 24         Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2505763     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.172275057 +0100
+Modificación: 2024-04-08 17:58:39.000000000 +0200
+      Cambio: 2025-11-20 09:21:17.444813332 +0100
+    Creación: 2025-11-20 09:21:17.444813332 +0100
+  Fichero: /usr/share/man/man1/ls.1.gz
+  Tamaño: 3275      	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2511478     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.071277245 +0100
+Modificación: 2025-06-22 18:21:39.000000000 +0200
+      Cambio: 2025-11-20 09:43:22.188149170 +0100
+    Creación: 2025-11-20 09:43:22.136149401 +0100
+  Fichero: /usr/share/man/man1/lsattr.1.gz
+  Tamaño: 639       	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2505948     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.198274494 +0100
+Modificación: 2024-04-29 01:44:46.000000000 +0200
+      Cambio: 2025-11-20 09:21:17.458813105 +0100
+    Creación: 2025-11-20 09:21:17.458813105 +0100
+  Fichero: /usr/share/man/man1/lsb_release.1.gz
+  Tamaño: 2733      	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2505949     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.198274494 +0100
+Modificación: 2023-07-05 17:34:50.000000000 +0200
+      Cambio: 2025-11-20 09:21:17.458813105 +0100
+    Creación: 2025-11-20 09:21:17.458813105 +0100
+  Fichero: /usr/share/man/man1/lscpu.1.gz
+  Tamaño: 3222      	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2502717     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.384270464 +0100
+Modificación: 2025-06-05 14:17:38.000000000 +0200
+      Cambio: 2025-11-20 09:43:23.348144390 +0100
+    Creación: 2025-11-20 09:43:23.311144514 +0100
+  Fichero: /usr/share/man/man1/lshw.1.gz
+  Tamaño: 2008      	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2505951     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.199274472 +0100
+Modificación: 2024-03-31 11:13:00.000000000 +0200
+      Cambio: 2025-11-20 09:21:17.458813105 +0100
+    Creación: 2025-11-20 09:21:17.458813105 +0100
+  Fichero: /usr/share/man/man1/lsipc.1.gz
+  Tamaño: 2001      	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2502745     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.384270464 +0100
+Modificación: 2025-06-05 14:17:38.000000000 +0200
+      Cambio: 2025-11-20 09:43:23.348144390 +0100
+    Creación: 2025-11-20 09:43:23.311144514 +0100
+  Fichero: /usr/share/man/man1/lslogins.1.gz
+  Tamaño: 2734      	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2502789     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.384270464 +0100
+Modificación: 2025-06-05 14:17:38.000000000 +0200
+      Cambio: 2025-11-20 09:43:23.348144390 +0100
+    Creación: 2025-11-20 09:43:23.311144514 +0100
+  Fichero: /usr/share/man/man1/lsmem.1.gz
+  Tamaño: 2272      	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2502885     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.384270464 +0100
+Modificación: 2025-06-05 14:17:38.000000000 +0200
+      Cambio: 2025-11-20 09:43:23.348144390 +0100
+    Creación: 2025-11-20 09:43:23.311144514 +0100
+  Fichero: /usr/share/man/man1/lspgpot.1.gz
+  Tamaño: 289       	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2510968     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.043277852 +0100
+Modificación: 2026-01-05 23:01:39.000000000 +0100
+      Cambio: 2026-01-14 10:13:35.921541192 +0100
+    Creación: 2026-01-14 10:13:35.915541302 +0100
+  Fichero: /usr/share/man/man1/lspower.1.gz
+  Tamaño: 518       	Bloques: 8          Bloque E/S: 4096   fichero regular
+Device: 8,2	Inode: 2500563     Links: 1
+Acceso: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Acceso: 2026-02-09 08:35:42.097276682 +0100
+Modificación: 2025-06-04 16:29:58.000000000 +0200
+      Cambio: 2025-11-20 09:43:37.726191383 +0100
+    Creación: 2025-11-20 09:43:37.722191347 +0100
