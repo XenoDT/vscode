@@ -1,0 +1,60 @@
+{
+"game": {
+    "Minecraft":{
+        "name": "Minecraft",
+        "date": 2025,
+        "pegi": "7",
+        "version": 1.20,
+        "gamemode":{
+            "mode":{
+                "survival": false,
+                "creative": true,
+                "adventure": false,
+                "spectator": false
+            },
+            "multiplayer":{
+                "lan": false,
+                "server": {
+                    "ip": "19.234.167.23"
+                }
+            }
+        },
+        "language":{
+            "es": false,
+            "en": false,
+            "andalúh": false,
+            "pirate": true
+        }
+    },
+    "Terraria":{
+        "name": "Terraria",
+        "date": 2025,
+        "pegi": "7",
+        "version": "5.4.3",
+        "player":{
+            "name": "pepe",
+            "type": "normal"
+        },
+        "world":{
+            "type":{
+                "small": false,
+                "medium": false,
+                "big": true
+            },
+            "dificulty":{
+                "journey": false,
+                "normal": false,
+                "expert": false,
+                "master": true
+            }
+        },
+        "language":{
+            "es": false,
+            "en": false,
+            "andalúh": false,
+            "pirate": true
+        }
+    }
+}
+
+}
