@@ -4,7 +4,7 @@
         "name": "Minecraft",
         "date": 2025,
         "pegi": "7",
-        "version": 1.20,
+        "version": "1.20.1",
         "gamemode":{
             "mode":{
                 "survival": false,
