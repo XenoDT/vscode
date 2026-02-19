@@ -19,7 +19,7 @@ RESTRICCIONES PARA EL XSD (y DTD):
 NOTAS: Tienes que hacer al menos 3 tipos con nombre aplicados a elementos o atributos.
 
 -->
-<recetario xmlns="http://tierno.es/pc"
+<recetario xmlns="http://tierno.es/recetario"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://tierno.es/recetario recetario.xsd">
     <receta>
@@ -41,7 +41,7 @@ xsi:schemaLocation="http://tierno.es/recetario recetario.xsd">
         <alergenos>
             <alergeno>
                 <nombre lang="es">Huevo</nombre>
-                <gravedad servicios-medicos="true">Media</gravedad>
+                <gravedad servicios-medicos="true">true</gravedad>
             </alergeno>
         </alergenos>
     </receta>

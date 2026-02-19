@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [1] Estructura raíz del schema con su namespace -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://tiernogalvan.es"
+           elementFormDefault="qualified">
+
+    <!-- [2, 3] Etiquetas de anotación y documentación para humanos -->
+    <xs:annotation>
+        <xs:documentation>XSD Maestro que integra todas las etiquetas de las fuentes.</xs:documentation>
+    </xs:annotation>
+
+    <!-- [4, 5] TIPO SIMPLE: Restricciones de rango numérico (minInclusive/maxInclusive) -->
+    <xs:simpleType name="TipoEdad">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="120"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- [5, 6] TIPO SIMPLE: Restricciones de enumeración y patrones (Regex) -->
+    <xs:simpleType name="TipoGenero">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ficcion"/>
+            <xs:enumeration value="tecnico"/>
+            <xs:pattern value="[a-z]+"/> <!-- Solo letras minúsculas [6] -->
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- [6, 7] TIPO SIMPLE: Restricciones de longitud (minLength/maxLength) -->
+    <xs:simpleType name="TipoPassword">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="8"/>
+            <xs:maxLength value="20"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- [8, 9] TIPO COMPLEJO: Elemento con texto y atributos (simpleContent + extension) -->
+    <xs:complexType name="TipoTitulo">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="lang" type="xs:string" use="optional"/> <!-- [9] Atributo opcional -->
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- [10-12] TIPO COMPLEJO: Subelementos y cardinalidad (minOccurs/maxOccurs) -->
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence> <!-- [11] Los elementos deben ir en este orden exacto -->
+                
+                <xs:element name="libro" maxOccurs="unbounded"> <!-- [12] Sin límite de libros -->
+                    <xs:complexType>
+                        <!-- [11, 13] Uso de xs:all (deben estar todos pero sin orden) y xs:choice (elegir uno) -->
+                        <xs:sequence>
+                            <xs:element name="titulo" type="TipoTitulo"/>
+                            
+                            <xs:choice> <!-- [11] Solo puede aparecer uno de estos dos -->
+                                <xs:element name="autor" type="xs:string"/>
+                                <xs:element name="editor" type="xs:string"/>
+                            </xs:choice>
+
+                            <xs:element name="detalles">
+                                <xs:complexType>
+                                    <xs:all> <!-- [11] Deben estar todos pero no importa el orden -->
+                                        <xs:element name="paginas" type="xs:positiveInteger"/>
+                                        <xs:element name="disponible" type="xs:boolean"/>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        
+                        <!-- [9, 13] Definición de atributos obligatorios y con valores fijos -->
+                        <xs:attribute name="isbn" type="xs:string" use="required"/> 
+                        <xs:attribute name="formato" type="xs:string" fixed="papel"/> <!-- [10] Valor fijo -->
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- [11, 13] Elemento vacío con atributos y contenido mixto -->
+                <xs:element name="marca-agua" mixed="true"> <!-- [11] Permite texto y etiquetas juntas -->
+                    <xs:complexType>
+                        <xs:attribute name="id" type="xs:ID"/> <!-- [14] Tipo ID built-in -->
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

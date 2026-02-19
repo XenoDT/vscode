@@ -1,111 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="https://tierno.es"
-    xmlns:tns="http://tierno.es/recetario"
-    elementFormDefault="qualified"> 
-
-    <!-- 1. Tipo con nombre para el Tiempo (Entero 1-240) [10] -->
-    <xs:simpleType name="TipoTiempo">
-        <xs:restriction base="xs:integer">
-            <xs:minInclusive value="1"/>
-            <xs:maxInclusive value="240"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <!-- 2. Tipo con nombre para la Dificultad (Enumeración) [10] -->
-    <xs:simpleType name="TipoDificultad">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="facil"/>
-            <xs:enumeration value="media"/>
-            <xs:enumeration value="dificil"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <!-- 3. Tipo con nombre para el Atributo de Idioma [10] -->
-    <xs:simpleType name="TipoLang">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="es"/>
-            <xs:enumeration value="en"/>
-            <xs:enumeration value="fr"/>
-            <xs:enumeration value="ar"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <!-- Elemento Raíz [11] -->
-    <xs:element name="recetario">
-        <xs:complexType>
-            <xs:sequence>
-                <!-- Restricción de 1 a 5 recetas [12] -->
-                <xs:element name="receta" minOccurs="1" maxOccurs="5">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="nombre" type="xs:string"/>
-                            <xs:element name="tiempo" type="tns:TipoTiempo"/>
-                            <xs:element name="dificultad" type="tns:TipoDificultad"/>
-                            
-                            <!-- De 2 a 10 ingredientes [12] -->
-                            <xs:element name="ingredientes">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="ingrediente" minOccurs="2" maxOccurs="10">
-                                            <xs:complexType>
-                                                <xs:simpleContent>
-                                                    <xs:extension base="xs:string">
-                                                        <xs:attribute name="cantidad" type="xs:string" use="optional"/>
-                                                    </xs:extension>
-                                                </xs:simpleContent>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-
-                            <!-- De 0 a 20 pasos [12] -->
-                            <xs:element name="pasos">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="paso" type="xs:string" minOccurs="0" maxOccurs="20"/>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-
-                            <!-- De 0 a 20 alergenos [12] -->
-                            <xs:element name="alergenos">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="alergeno" minOccurs="0" maxOccurs="20">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="nombre">
+       targetNamespace="http://tierno.es/recetario"
+       xmlns:tns="http://tierno.es/recetario"
+       elementFormDefault="qualified">
+       <xs:simpleType name="TimeType">
+              <xs:restriction base="xs:integer">
+                     <xs:minExclusive value="0"/>
+                     <xs:maxExclusive value="240"/>
+              </xs:restriction>
+       </xs:simpleType>
+       <xs:simpleType name="DifucultyType">
+              <xs:restriction base="xs:string">
+                     <xs:enumeration value="facil"/>
+                     <xs:enumeration value="media"/>
+                     <xs:enumeration value="dificil"/>
+              </xs:restriction>
+       </xs:simpleType>
+       <xs:complexType name="AlergenosType">
+              <xs:sequence>
+                     <xs:element name="nombre">
+                            <xs:complexType>
+                                   <xs:simpleContent>
+                                          <xs:extension base="xs:string">
+                                                 <xs:attribute name="lang"/>
+                                          </xs:extension>
+                                   </xs:simpleContent>
+                            </xs:complexType>
+                     </xs:element>
+                     <xs:element name="gravedad" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                   <xs:simpleContent>
+                                          <xs:extension base="xs:boolean">
+                                                 <xs:attribute name="servicios-medicos"/>
+                                          </xs:extension>
+                                   </xs:simpleContent>
+                            </xs:complexType>
+                     </xs:element>
+              </xs:sequence>
+       </xs:complexType>
+       <xs:element name="recetario">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="receta" minOccurs="1" maxOccurs="5">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="nombre" type="xs:string"/>
+                                                 <xs:element name="tiempo" type="tns:TimeType"/>
+                                                 <xs:element name="dificultad" type="tns:DifucultyType"/>
+                                                 <xs:element name="ingredientes">
                                                         <xs:complexType>
-                                                            <xs:simpleContent>
-                                                                <xs:extension base="xs:string">
-                                                                    <xs:attribute name="lang" type="tns:TipoLang" use="optional"/>
-                                                                </xs:extension>
-                                                            </xs:simpleContent>
+                                                               <xs:sequence>
+                                                                      <xs:element name="ingrediente" minOccurs="2" maxOccurs="10">
+                                                                             <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                           <xs:extension base="xs:string" >
+                                                                                                  <xs:attribute name="cantidad" use="optional"/>
+                                                                                           </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                             </xs:complexType>
+                                                                      </xs:element>
+                                                               </xs:sequence>
                                                         </xs:complexType>
-                                                    </xs:element>
-                                                    <xs:element name="gravedad">
+                                                 </xs:element>
+                                                 <xs:element name="pasos">
                                                         <xs:complexType>
-                                                            <xs:simpleContent>
-                                                                <xs:restriction base="xs:anyType">
-                                                                    <!-- Aunque se restringe el contenido, se añade el atributo obligatorio [9] -->
-                                                                    <xs:attribute name="servicios-medicos" type="xs:boolean" use="required"/>
-                                                                </xs:restriction>
-                                                            </xs:simpleContent>
+                                                               <xs:sequence>
+                                                                      <xs:element name="paso" type="xs:string" minOccurs="0" maxOccurs="20"/>
+                                                               </xs:sequence>
                                                         </xs:complexType>
-                                                    </xs:element>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                </xs:complexType>
+                                                 </xs:element>
+                                                 <xs:element name="alergenos">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="alergeno" type="tns:AlergenosType" minOccurs="0" maxOccurs="20"/>
+                                                               </xs:sequence>
+                                                        </xs:complexType>
+                                                 </xs:element>
+                                          </xs:sequence>
+                                   </xs:complexType>
                             </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
+                     </xs:sequence>
+              </xs:complexType>
+       </xs:element>
 </xs:schema>
