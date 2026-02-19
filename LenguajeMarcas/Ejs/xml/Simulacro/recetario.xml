@@ -19,7 +19,9 @@ RESTRICCIONES PARA EL XSD (y DTD):
 NOTAS: Tienes que hacer al menos 3 tipos con nombre aplicados a elementos o atributos.
 
 -->
-<recetario>
+<recetario xmlns="http://tierno.es/pc"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://tierno.es/recetario recetario.xsd">
     <receta>
         <nombre>Tortilla de patatas</nombre>
         <tiempo>30</tiempo>
