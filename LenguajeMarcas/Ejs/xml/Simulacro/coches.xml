@@ -17,7 +17,10 @@ RESTRICCIONES PARA EL XSD (y DTD):
   - Extras opcionales (0-5 elementos con atributo precio)
 -->
   
-<concesionario nombre="Autos Madrid">
+<concesionario nombre="Autos Madrid" 
+xmlns="http://www.tierno.es/coches"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.tierno.es/coches coches.xsd">
     <coche matricula="1234ABC">
         <marca>Seat</marca>
         <modelo>Ibiza</modelo>

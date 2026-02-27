@@ -1,0 +1,61 @@
+{
+    "catalogo": {
+        "nombre": "TechStore",
+        "categoria1": {
+            "nombre": "Electronica",
+            "producto1": {
+                "codigo": "P001",
+                "stock": 25,
+                "nombre": "Portátil Pro",
+                "descripcion": "16GB RAM, 512GB SSD",
+                "precio": {
+                    "precio": 899.99,
+                    "moneda": {
+                        "EUR": true,
+                        "USD": false,
+                        "GBP": false
+                    }
+                },
+                "especificaciones": {
+                    "espec1": {
+                        "nombre": "Procesador",
+                        "content": "intel i7"
+                    },
+                    "espec2": {
+                        "nombre": "ram",
+                        "content": "16GB"
+                    }
+                }
+            },
+            "producto2": {
+                "codigo": "P002",
+                "stock": 10,
+                "nombre": "Tables Lite",
+                "precio": {
+                    "precio": 249.60,
+                    "moneda": {
+                        "EUR": true,
+                        "USD": false,
+                        "GBP": false
+                    }
+                }
+            }
+        },
+        "categoria2": {
+            "nombre": "Libros",
+            "producto": {
+                "codigo": "P003",
+                "stock": 3,
+                "nombre": "XML Avanzado",
+                "precio": {
+                    "precio": 45.99,
+                    "moneda": {
+                        "EUR": false,
+                        "USD": true,
+                        "GBP": false
+                    }
+                }
+            }
+        }
+    }
+}

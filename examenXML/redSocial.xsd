@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tierno.es/redSocial"
+    xmlns:tns="http://tierno.es/redSocial"
+    elementFormDefault="qualified">
+    <xs:element name="redSocial">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="usuario" type="tns:UserType" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="UserType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="email" type="tns:emailPattern" />
+            <xs:element name="telefono" minOccurs="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="prefijo" type="tns:prefijoType" use="optional" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="seguidores" type="tns:SeguidoresNum" minOccurs="0" />
+            <xs:element name="amigos" type="tns:amigosType" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" />
+        <xs:attribute name="rol" type="tns:rolType" default="usuario" />
+    </xs:complexType>
+    <xs:complexType name="amigosType">
+        <xs:sequence>
+            <xs:element name="amigo" minOccurs="1" maxOccurs="20">
+                <xs:complexType>
+                    <xs:attribute name="ref" type="xs:IDREF" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="SeguidoresNum">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="rolType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="admin" />
+            <xs:enumeration value="usuario" />
+            <xs:enumeration value="invitado" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="prefijoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="+34" />
+            <xs:enumeration value="+33" />
+            <xs:enumeration value="+44" />
+            <xs:enumeration value="+49" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="emailPattern">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

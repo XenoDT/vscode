@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE library SYSTEM "Library.dtd">
-<library>
+<!-- <!DOCTYPE library SYSTEM "Library.dtd"> -->
+<library xmlns="http://tierno.es/Library"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://tierno.es/Library Library.xsd">
     <book id="AA" available="no" format="ebook">
         <title>Reb de los pollos</title>
         <author>

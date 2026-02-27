@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tierno.es/Library"
+    xmlns:tns="http://tierno.es/Library"
+    elementFormDefault="qualified">
+    <xs:element name="library">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="author" type="tns:AuthorType" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element name="publication" type="tns:PublicationType"/>
+                            <xs:element name="genre">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="main-genre"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="isbn" type="xs:string"/>
+                            <xs:element name="price">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:double">
+                                            <xs:attribute name="currency" type="xs:string"/>
+                                            <xs:attribute name="tax-included" type="tns:availabletype"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="description" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="available" type="tns:availabletype" use="optional"/>
+                        <xs:attribute name="format" type="xs:string" use="required"/>
+                        <xs:attribute name="language" type="xs:string" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="AuthorType">
+        <xs:sequence>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+            <xs:element name="nationality" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="PublicationType">
+        <xs:sequence>
+            <xs:element name="publisher" type="xs:string"/>
+            <xs:element name="year" type="xs:integer"/>
+            <xs:element name="edition" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="availabletype">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,79 @@
+{
+    "Library": {
+        "book1": {
+            "book": {
+                "id": "AA",
+                "available": "no",
+                "format": {
+                    "paperback": false,
+                    "hardcover": false,
+                    "ebook": true
+                }
+            },
+            "title": "Reb de los pollos",
+            "author": {
+                "firstname": "Goku",
+                "lastname": "Mario",
+                "nationality": "Jp"
+            },
+            "publication": {
+                "publisher": "Norma",
+                "year": 789,
+                "editon": 2.2
+            },
+            "genre": {
+                "main-genre": "Shounen",
+                "genre": "Sheinen"
+            },
+            "isbn": "sdmfs0vf9uwe0vj0sdc",
+            "precio": {
+                "precio": 20.99,
+                "moneda": {
+                    "EUR": true,
+                    "USD": false,
+                    "GBP": false
+                },
+                "tax-incluyed": "no"
+            },
+            "descripcion": "No one will know"
+        },
+        "book2": {
+            "book": {
+                "id": "Ac",
+                "available": null,
+                "language": "es",
+                "format": {
+                    "paperback": false,
+                    "hardcover": false,
+                    "ebook": true
+                }
+            },
+            "title": "Reb de los pollos",
+            "author": {
+                "firstname": "Goku",
+                "lastname": "Mario",
+                "nationality": "Jp"
+            },
+            "publication": {
+                "publisher": "Norma",
+                "year": 789,
+                "editon": 2.2
+            },
+            "genre": {
+                "main-genre": "Shounen",
+                "genre": "Sheinen"
+            },
+            "isbn": "sdmfs0vf9uwe0vj0sdc",
+            "precio": {
+                "precio": 20.99,
+                "moneda": {
+                    "EUR": true,
+                    "USD": false,
+                    "GBP": false
+                },
+                "tax-incluyed": "no"
+            },
+            "descripcion": "No one will know"
+        }
+    }
+}

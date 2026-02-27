@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tierno.es/catalogo"
+    xmlns:tns="http://tierno.es/catalogo"
+    elementFormDefault="qualified">
+    <xs:element name="catalogo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="categoria" minOccurs="1" maxOccurs="10">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="producto" type="tns:productoType" minOccurs="1" maxOccurs="50"/>
+                        </xs:sequence>
+                        <xs:attribute name="nombre" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="tienda" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="productoType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+            <xs:element name="precio">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:double">
+                            <xs:attribute name="moneda" type="tns:monedaType"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="especificaciones" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="espec" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="codigo" type="tns:codigotype" use="required"/>
+        <xs:attribute name="stock" type="tns:stocknum" use="optional"/>
+    </xs:complexType>
+    <xs:simpleType name="monedaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="EUR"/>
+            <xs:enumeration value="USD"/>
+            <xs:enumeration value="GBP"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="stocknum">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="1000"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="codigotype">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[P]+[0-9]{2,}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="book.xsl" type="text/xsl"?>
+<book>
+    <title>Nuestra parte de noche</title>
+    <author nationality="Argentina">Mariana Enríquez</author>
+    <year>2019</year>
+    <pages>672</pages>
+    <description>Un padre y un hijo atraviesan Argentina por carretera, desde Buenos Aires hacia las
+        cataratas de Iguazú, en la frontera norte con Brasil.</description>
+    <links>
+        <link>https://www.goodreads.com/book/show/48758708</link>
+    </links>
+</book>

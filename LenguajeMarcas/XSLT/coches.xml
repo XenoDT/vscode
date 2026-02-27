@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="coches.xsl" type="text/xsl"?>
+<concesionario>
+    <coche matricula="1234ABC">
+        <marca>Seat</marca>
+        <modelo>Ibiza</modelo>
+        <año>2020</año>
+        <kilometros>25000</kilometros>
+        <precio>14500.50</precio>
+        <extras>
+            <extra precio="450">Climatizador</extra>
+            <extra precio="300">Sensor de aparcamiento</extra>
+        </extras>
+    </coche>
+</concesionario>

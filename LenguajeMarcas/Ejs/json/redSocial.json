@@ -1,0 +1,49 @@
+{
+    "redSocial": {
+        "usuario1": {
+            "id": "U001",
+            "rol": {
+                "admin": true,
+                "invitado": false,
+                "usuario": false
+            },
+            "nombre": "Ana García",
+            "email": "ana@email.com",
+            "telefono": {
+                "number": 612345678,
+                "prefijo": {
+                    "+33": false,
+                    "+34": true,
+                    "+44": false,
+                    "+49": true
+                }
+            },
+            "seguidores": 150,
+            "amigos": {
+                "amigo": {
+                    "id": "U002"
+                }
+            }
+        },
+        "usuario2": {
+            "id": "U002",
+            "rol":{
+                "admin": false,
+                "invitado": false,
+                "usuario": true
+            },
+            "nombre": "Carlos Lópes",
+            "email": "carlos@email.com",
+            "telefono": {
+                "number": 623456789,
+                "prefijo": {
+                    "+33": false,
+                    "+34": true,
+                    "+44": false,
+                    "+49": true
+                }
+            },
+            "seguidores": 75
+        }
+    }
+}
