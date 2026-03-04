@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="book.xsl" type="text/xsl"?>
+<?xml-stylesheet href="bookjason.xsl" type="text/xsl"?>
 <book>
     <title>Nuestra parte de noche</title>
     <author nationality="Argentina">Mariana Enríquez</author>
@@ -9,5 +9,6 @@
         cataratas de Iguazú, en la frontera norte con Brasil.</description>
     <links>
         <link>https://www.goodreads.com/book/show/48758708</link>
+        <link>https://www.goodreads.com/book/show/48758709</link>
     </links>
 </book>
