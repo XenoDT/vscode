@@ -33,9 +33,9 @@
                         <td><xsl:value-of select="artist"/></td>
                         <td><xsl:value-of select="year"/></td>
                     </tr>
-                    
                     </xsl:for-each>
                 </table>
+                <h2>Suma de años: <xsl:value-of select="sum(songs//year)"/></h2>
             </body>
         </html>    
         
