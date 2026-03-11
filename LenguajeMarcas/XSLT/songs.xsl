@@ -35,7 +35,8 @@
                     </tr>
                     </xsl:for-each>
                 </table>
-                <h2>Suma de años: <xsl:value-of select="sum(songs//year)"/></h2>
+                <h2>Suma de años: <xsl:value-of select="sum(//year)"/></h2>
+                <h2>Media de años:<xsl:value-of select="round( sum(//year) div(count(//year)))"/></h2>
             </body>
         </html>    
         
