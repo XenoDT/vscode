@@ -16,6 +16,11 @@
         <artist>Michael Jackson</artist>
         <year>1983</year>
     </song>
+    <song>
+        <title>Touch the sky</title>
+        <artist>SR3L</artist>
+        <year>2024</year>
+    </song>
 </songs>
 <!-- 
      Requisitos:
