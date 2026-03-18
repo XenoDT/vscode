@@ -21,10 +21,19 @@
         <artist>SR3L</artist>
         <year>2024</year>
     </song>
+    <song>
+        <title>Trillium</title>
+        <artist>SR3L, Sara</artist>
+        <year>2016</year>
+    </song>
+    <song>
+        <title>celebi</title>
+        <artist>Arceus</artist>
+        <year>-9900</year>
+    </song>
 </songs>
 <!-- 
-     Requisitos:
-     - Generar un HTML con un título "Mis songes favoritas"
+     Requisit  - Generar un HTML con un título "Mis songes favoritas"
      - Mostrar una lista no ordenada (<ul>) con todas las songes
      - Cada elemento debe mostrar: "Título (year) - artist". OJO: Tienes que utilizar la función concat() para ello.
      - Ordenar las songes por year (de más antigua a más reciente)
