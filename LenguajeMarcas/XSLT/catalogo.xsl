@@ -11,27 +11,18 @@
       "Id": "<xsl:value-of select="@id"/>",
       "Nombre": "<xsl:value-of select="@nombre"/>",
       "Productos": [
-      <xsl:for-each select="producto">
+      <xsl:for-each select="producto[stock > 10]">
         {
         "Nombre": "<xsl:value-of select="nombre"/>",
         "Marca": "<xsl:value-of select="marca"/>",
         "Precio": <xsl:value-of select="precio"/>,
+        "precio_con_iva": <xsl:value-of select="precio * 1.21"/>,
         "Stock": <xsl:value-of select="stock"/>,
         "Especificaciones": {
-        <xsl:choose>
-          <xsl:when test="../@id='electronica'">
-            <xsl:if test="especificaciones/pantalla">"Pantalla": "<xsl:value-of select="especificaciones/pantalla"/>"<xsl:if test="especificaciones/ram or especificaciones/almacenamiento or especificaciones/tipo or especificaciones/autonomia">,</xsl:if></xsl:if>
-            <xsl:if test="especificaciones/ram">"Ram": "<xsl:value-of select="especificaciones/ram"/>"<xsl:if test="especificaciones/almacenamiento or especificaciones/tipo or especificaciones/autonomia">,</xsl:if></xsl:if>
-            <xsl:if test="especificaciones/almacenamiento">"Almacenamiento": "<xsl:value-of select="especificaciones/almacenamiento"/>"<xsl:if test="especificaciones/tipo or especificaciones/autonomia">,</xsl:if></xsl:if>
-            <xsl:if test="especificaciones/tipo">"Tipo": "<xsl:value-of select="especificaciones/tipo"/>"<xsl:if test="especificaciones/autonomia">,</xsl:if></xsl:if>
-            <xsl:if test="especificaciones/autonomia">"Autonomia": "<xsl:value-of select="especificaciones/autonomia"/>"</xsl:if>
-          </xsl:when>
-          <xsl:otherwise>
-            "Potencia": "<xsl:value-of select="especificaciones/potencia"/>",
-            "Autonomia": "<xsl:value-of select="especificaciones/autonomia"/>"
-          </xsl:otherwise>
-        </xsl:choose>
-        }
+              <xsl:for-each select="especificaciones/*">
+                "<xsl:value-of select="name()"/>": "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
+              </xsl:for-each>
+            }
         <xsl:if test="etiquetas">
           ,"Etiquetas": [
           <xsl:for-each select="etiquetas/etiqueta">

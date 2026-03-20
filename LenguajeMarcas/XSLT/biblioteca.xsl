@@ -6,7 +6,7 @@
     Titulo,Nombre autor,Apellido autor,Editorial,Fecha,Precio,Género
     </xsl:text>
     <xsl:for-each select="biblioteca/libro">
-      <xsl:sort select="precio" order="descending">
+      <xsl:sort select="precio" order="descending" data-type="number">
         
       </xsl:sort>
       <xsl:if test=".[disponible = 'true']">
