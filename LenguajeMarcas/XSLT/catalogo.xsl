@@ -1,62 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="text"/>
+  <xsl:output method="text" encoding="UTF-8"/>
+  
   <xsl:template match="/">
     {
-    "catalogo":{
-    "categoria":{
+    "Tienda": "<xsl:value-of select="catalogo/@tienda"/>",
+    "Categorias": [
     <xsl:for-each select="catalogo/categoria">
-      "Producto":{
-      <xsl:for-each select="./producto">
+      {
+      "Id": "<xsl:value-of select="@id"/>",
+      "Nombre": "<xsl:value-of select="@nombre"/>",
+      "Productos": [
+      <xsl:for-each select="producto">
+        {
         "Nombre": "<xsl:value-of select="nombre"/>",
         "Marca": "<xsl:value-of select="marca"/>",
-        "Precio": "<xsl:value-of select="precio"/>",
-        "Stock": "<xsl:value-of select="stock"/>"
-        "Especificaciones":{
-        
+        "Precio": <xsl:value-of select="precio"/>,
+        "Stock": <xsl:value-of select="stock"/>,
+        "Especificaciones": {
         <xsl:choose>
           <xsl:when test="../@id='electronica'">
-            <xsl:if test="especificaciones/pantalla">
-              "Pantalla": "<xsl:value-of select="especificaciones/pantalla"/>",
-            </xsl:if>
-            <xsl:if test="especificaciones/ram">
-              "Ram": "<xsl:value-of select="especificaciones/ram"/>"
-            </xsl:if>
-            <xsl:if test="especificaciones/almacenamiento">
-              "Almacenamiento": "<xsl:value-of select="especificaciones/almacenamiento"/>",
-            </xsl:if>   
-            <xsl:if test="especificaciones/tipo">
-              "Tipo": <xsl:value-of select="especificaciones/tipo"/>,
-            </xsl:if>
-            <xsl:if test="especificaciones/autonomia">
-            "Autonomia": "<xsl:value-of select="especificaciones/autonomia"/>"
-            </xsl:if>
+            <xsl:if test="especificaciones/pantalla">"Pantalla": "<xsl:value-of select="especificaciones/pantalla"/>"<xsl:if test="especificaciones/ram or especificaciones/almacenamiento or especificaciones/tipo or especificaciones/autonomia">,</xsl:if></xsl:if>
+            <xsl:if test="especificaciones/ram">"Ram": "<xsl:value-of select="especificaciones/ram"/>"<xsl:if test="especificaciones/almacenamiento or especificaciones/tipo or especificaciones/autonomia">,</xsl:if></xsl:if>
+            <xsl:if test="especificaciones/almacenamiento">"Almacenamiento": "<xsl:value-of select="especificaciones/almacenamiento"/>"<xsl:if test="especificaciones/tipo or especificaciones/autonomia">,</xsl:if></xsl:if>
+            <xsl:if test="especificaciones/tipo">"Tipo": "<xsl:value-of select="especificaciones/tipo"/>"<xsl:if test="especificaciones/autonomia">,</xsl:if></xsl:if>
+            <xsl:if test="especificaciones/autonomia">"Autonomia": "<xsl:value-of select="especificaciones/autonomia"/>"</xsl:if>
           </xsl:when>
-          <xsl:when test="../@id">
-            "Potencia": "<xsl:value-of select="especificaciones/potencia"/>"
+          <xsl:otherwise>
+            "Potencia": "<xsl:value-of select="especificaciones/potencia"/>",
             "Autonomia": "<xsl:value-of select="especificaciones/autonomia"/>"
-          </xsl:when>
+          </xsl:otherwise>
         </xsl:choose>
-        },
-        <xsl:if test="./etiquetas">
-          "Etiquetas":{
+        }
+        <xsl:if test="etiquetas">
+          ,"Etiquetas": [
           <xsl:for-each select="etiquetas/etiqueta">
-            <xsl:choose>
-              <xsl:when test="last()">
-                "Etiqueta": "<xsl:value-of select="."/>"
-              </xsl:when>
-              <xsl:otherwise>
-                "Etiqueta": "<xsl:value-of select="."/>",
-              </xsl:otherwise>
-            </xsl:choose>
-            
+            "<xsl:value-of select="."/>"<xsl:if test="position() != last()">,</xsl:if>
           </xsl:for-each>
-          }
+          ]
         </xsl:if>
-      </xsl:for-each>},
+        }<xsl:if test="position() != last()">,</xsl:if>
+      </xsl:for-each>
+      ]
+      }<xsl:if test="position() != last()">,</xsl:if>
     </xsl:for-each>
-    }
-    }
+    ]
     }
   </xsl:template>
-</xsl:stylesheet>             
+</xsl:stylesheet>
