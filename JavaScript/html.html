@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tareas Pro</title>
+    <style>
+        /* 1. Variables para cambiar colores fácilmente */
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #bb86fc;
+    --danger-color: #cf6679;
+    --success-color: #03dac6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+h2{
+    flex: 0.2;
+}
+/* 2. Contenedor principal */
+.container {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* 3. Estilo del Input y Botón */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 0.3;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+button#btnAgregar {
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button#btnAgregar:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* 4. Estilo de la Lista */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #2c2c2c;
+    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.completada {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.btn-eliminar {
+    background: transparent;
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.btn-eliminar:hover {
+    background: var(--danger-color);
+    color: white;
+}
+
+/* 5. Animación simple */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+    </style>
+</head>
+<body>
+    <h2>Mi Gestor de Tareas</h2>
+    <input type="text" id="tareaInput" placeholder="Nueva tarea...">
+    <button id="btnAgregar">Agregar</button>
+
+    <ul id="listaTareas"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

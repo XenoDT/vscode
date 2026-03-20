@@ -1,0 +1,638 @@
+/*Reseteo de estilo por defector del navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+/*Establecemos la fuente a la importada en html*/
+body {
+    font-family: 'Pokemon Solid';
+}
+
+/*Cambiamos el fondo de color y cambiamos el color de la fuente*/
+main {
+    background-color: #131313;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    min-height: 80vh;
+    
+}
+
+/*Establecemos la fuente a la importada en html*/
+.h1 {
+    font-family: 'Pokemon Hollow';
+    text-align: center;
+}
+
+/*Cambiamos el color de la clase navbar la cual es la encargada
+de cambiar el nav.*/
+/* Contenedor principal de la barra de navegación
+   Se define el color de fondo de la navbar */
+.navbar {
+    background-color: #dc143c;
+
+}
+
+/* Estilos para la lista dentro de la navbar */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para cada elemento de la lista */
+.navbar ul > li {
+    margin: 0;
+}
+
+/* Estilos para los enlaces de la navbar */
+.navbar a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Efecto hover al pasar el cursor sobre los enlaces */
+.navbar a:hover {
+    background-color: #555;
+}
+
+.navbar a:visited {
+    color: yellow;
+}
+
+#hoenn {
+    border-bottom: 3px solid #dc143c;
+    padding-bottom: 5px;
+    ;
+}
+
+#sinnoh {
+    border-bottom: 3px solid #dc143c;
+    padding-bottom: 5px;
+    ;
+}
+
+#kalos {
+    border-bottom: 3px solid #dc143c;
+    padding-bottom: 5px;
+    ;
+}
+
+.aside {
+    justify-content: left;
+    flex: 1;
+    background-color: #131313;
+    padding: 10px;
+    display: flex;
+    font-size: 0.85em;
+}
+
+.aside ol {
+    background-color: #dc143c;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.aside li {
+    margin: 0;
+}
+
+.aside a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.aside a:hover {
+    background-color: #555;
+}
+
+.hoenn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: lightgreen;
+    color: black;
+}
+
+.hoenn h2,
+.hoenn h3 {
+    text-align: center;
+    font-family: 'Pokemon Hollow';
+}
+
+.hoenn h2 {
+    font-size: 50px;
+}
+
+.hoenn ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hoenn li {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.hoennlip {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.hoenn table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    border: 5px;
+    border-color: black;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+.hoenn tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.hoenn video,
+.hoenn iframe,
+.hoenn img {
+    display: block;
+    margin: 0 auto;
+}
+
+.hoenn p {
+    max-width: 800px;
+    text-align: justify;
+}
+
+.hoenn *::selection {
+    background-color: cyan;
+    color: #dc143c;
+}
+
+.hoenn tr,
+td {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.hoenn th {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.hoenn a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.galeria img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+.hoenn h2::first-letter, .sinnoh h2::first-letter, .kalos h2::first-letter {
+    font-size: 1.5em;
+    color: #ffcb05; /* Color amarillo Pokémon */
+    text-shadow: 2px 2px #3b4cca;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #2a2a2a; /* Propiedad 1 */
+    border-radius: 8px;        /* Propiedad 2 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Propiedad 3 */
+    border: 2px solid #dc143c; /* Propiedad 4 */
+    color: white;              /* Propiedad 5 */
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border: 3px solid yellow;
+    background-color: #444;
+}
+input[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #dc143c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* Estilos para el pie de página  */
+.footer {
+    background-color: #dc143c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+@media (max-width: 480px) {
+
+
+    /* NAVBAR en columna */
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* ASIDE oculto en móviles */
+    .aside {
+        display: none;
+    }
+
+    /* HOENN ajustes */
+    .hoenn {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .hoenn h2 {
+        font-size: 28px;
+    }
+
+    .hoenn h3 {
+        font-size: 20px;
+    }
+
+    .hoenn p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    /* Lista Hoenn en columna */
+    .hoenn ul {
+        flex-direction: column;
+    }
+
+    /* Galería: imágenes más pequeñas */
+    .galeria img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Tabla adaptable */
+    .hoenn table {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* NAVBAR más compacta */
+    .navbar a {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+
+    /* ASIDE visible pero más estrecho */
+    .aside {
+        flex: 0.8;
+        padding: 5px;
+    }
+
+    .aside a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* HOENN ajustes intermedios */
+    .hoenn {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .hoenn h2 {
+        font-size: 38px;
+    }
+
+    .hoenn h3 {
+        font-size: 24px;
+    }
+
+    .hoenn p {
+        font-size: 15px;
+    }
+
+    /* Galería con menos espacio */
+    .galeria {
+        gap: 15px;
+    }
+
+    .galeria img {
+        width: 200px;
+        height: 150px;
+    }
+}
+.sinnoh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #A9BDFF;
+    color: black;
+}
+
+.sinnoh h2,
+.sinnoh h3 {
+    text-align: center;
+    font-family: 'Pokemon Hollow';
+}
+
+.sinnoh h2 {
+    font-size: 50px;
+}
+
+.sinnoh ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sinnoh li {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.sinnohlip {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.sinnoh table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    border: 5px;
+    border-color: black;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+.sinnoh tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.sinnoh video,
+.sinnoh iframe,
+.sinnoh img {
+    display: block;
+    margin: 0 auto;
+}
+
+.sinnoh p {
+    max-width: 800px;
+    text-align: justify;
+}
+
+.sinnoh *::selection {
+    background-color: cyan;
+    color: #dc143c;
+}
+
+.sinnoh tr,
+td {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.sinnoh th {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.sinnoh a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* --- SECCIÓN KALOS --- */
+
+.kalos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #FF1919;
+    color: black;
+}
+
+.kalos h2,
+.kalos h3 {
+    text-align: center;
+    font-family: 'Pokemon Hollow';
+}
+
+.kalos h2 {
+    font-size: 50px;
+}
+
+.kalos ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.kalos li {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.kaloslip {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos de tabla específicos para la sección Kalos */
+.kalos table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    border: 5px;
+    border-color: black;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+.kalos tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Multimedia centrada en Kalos */
+.kalos video,
+.kalos iframe,
+.kalos img {
+    display: block;
+    margin: 0 auto;
+}
+
+.kalos p {
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Color de selección de texto personalizado para Kalos */
+.kalos *::selection {
+    background-color: cyan;
+    color: #dc143c;
+}
+
+.kalos tr,
+td {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.kalos th {
+    text-align: center;
+    border: 5px;
+    border-color: red;
+    border-style: inset;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.kalos a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+/* Se aplica a imágenes, vídeos e iframes (PDFs) en las secciones de contenido */
+.hoenn img, .hoenn video, .hoenn iframe,
+.sinnoh img, .sinnoh video, .sinnoh iframe,
+.kalos img, .kalos video, .kalos iframe {
+    max-width: 100%;             /* Hace que sean responsivos */
+    height: auto;                /* Mantiene la proporción */
+    display: block;              /* Permite usar margin auto para centrar */
+    margin: 25px auto;           /* Espaciado arriba/abajo y centrado lateral */
+    
+    /* Bordes estilizados */
+    border: 6px double #3b4cca;  /* Borde doble estilo clásico */
+    border-radius: 15px;         /* Esquinas redondeadas */
+    
+    /* Sombra para dar profundidad */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    
+    /* Transición suave para cuando pasas el ratón */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto opcional: resalta un poco al pasar el ratón */
+.hoenn img:hover, .hoenn video:hover , .sinnoh img:hover, .sinnoh video:hover,
+.kalos img:hover, .kalos video:hover {
+    transform: scale(1.02);
+}
+
+/* Tamaño específico para los IFRAME (PDF) para que se vean bien */
+iframe {
+    width: 90%;
+    min-height: 400px;
+}
