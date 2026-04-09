@@ -8,8 +8,8 @@
         <version>1.20.1</version>
         <gamemode>
             <mode>
-                <survival>false</survival>
-                <creative>true</creative>
+                <survival>true</survival>
+                <creative>false</creative>
                 <adventure>false</adventure>
                 <spectator>false</spectator>
             </mode>

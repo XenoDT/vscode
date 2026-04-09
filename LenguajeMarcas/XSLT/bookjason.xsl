@@ -4,14 +4,14 @@
     <xsl:template match="/">
         {
         "book":{
-        "title": "<xsl:value-of select="book/title"/>",
-        "author": "<xsl:value-of select="book/author"/>",
-        "year": <xsl:value-of select="book/year"/>,
-        "pages": <xsl:value-of select="book/pages"/>,
-        "description": "<xsl:value-of select="book/description"/>"
-        "links":{
+            "title": "<xsl:value-of select="book/title"/>",
+            "author": "<xsl:value-of select="book/author"/>",
+            "year": "<xsl:value-of select="book/year"/>",
+            "pages": "<xsl:value-of select="book/pages"/>",
+            "description": "<xsl:value-of select="book/description"/>"
+            "links":{
         <xsl:for-each select="book/links/link">
-            "link": "<xsl:value-of select="."/>",
+                "link": "<xsl:value-of select="."/>",
             <xsl:if test="position() = last()">
                 "link": <xsl:value-of select="."/>
             </xsl:if>

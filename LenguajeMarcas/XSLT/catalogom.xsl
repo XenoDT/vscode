@@ -62,7 +62,7 @@
             </xsl:choose>
             },
             <xsl:if test="./etiquetas">
-              "Etiquetas":{
+              "Etiquetas":[
               <xsl:for-each select="etiquetas/etiqueta">
                 <xsl:choose>
                   <xsl:when test="position() = last()">
@@ -74,7 +74,7 @@
                 </xsl:choose>
                 
               </xsl:for-each>
-              }
+              ]
             </xsl:if>
           
         </xsl:when>
@@ -106,7 +106,7 @@
                   "Autonomia": "<xsl:value-of select="especificaciones/autonomia"/>"
                 </xsl:if>
               </xsl:when>
-              <xsl:when test="../@id">
+              <xsl:when test="../@id='hogar'">
                 "Potencia": "<xsl:value-of select="especificaciones/potencia"/>"
                 "Autonomia": "<xsl:value-of select="especificaciones/autonomia"/>"
               </xsl:when>
