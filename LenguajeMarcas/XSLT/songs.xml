@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="songs.xsl" type="text/xsl"?>
+<?xml-stylesheet href="songs-to-html.xsl" type="text/xsl"?>
 <songs>
     <song>
         <title>Bohemian Rhapsody</title>
@@ -23,13 +23,13 @@
     </song>
     <song>
         <title>Trillium</title>
-        <artist>SR3L, Sara</artist>
+        <artist>SR3L &amp; Sara</artist>
         <year>2026</year>
     </song>
     <song>
         <title>celebi</title>
         <artist>Arceus</artist>
-        <year>-9900</year>
+        <year>-9910</year>
     </song>
 </songs>
 <!-- 
