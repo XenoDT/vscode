@@ -7,17 +7,15 @@
       <xsl:for-each select="biblioteca/libro">
           "libro":{
               "isbn": "<xsl:value-of select="@isbn"/>",
-              "title": "<xsl:value-of select="title"/>",
-              "comp.name": "<xsl:value-of select="concat(autor/nombre, ' ', autor/apellido)"/>,
+              "titulo": "<xsl:value-of select="titulo"/>",
+              "comp.name": "<xsl:value-of select="concat(autor/nombre, ' ', autor/apellido)"/>",
               "editorial": "<xsl:value-of select="editorial"/>",
               "pub.year": "<xsl:value-of select="substring(fecha_publicacion, 1, 4)"/>",
               "precio": "<xsl:value-of select="precio"/>",
               "generos":[
                 <xsl:for-each select="generos/genero">
-                  "genero": "<xsl:value-of select="."/>"
-                  <xsl:if test="position() != last()">
-                    ;
-                  </xsl:if>
+                  {"genero": "<xsl:value-of select="."/>"}
+                  <xsl:if test="position() != last()">,</xsl:if>
                 </xsl:for-each>
               ],
               "disponible":<xsl:choose>
