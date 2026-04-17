@@ -16,6 +16,4 @@ function getRandom(min,max){
     max = Math.floor(max)
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
-const fsuma = function suma(a,b){
-    return a+b
-}
+                                                                                                                                                                                                     
