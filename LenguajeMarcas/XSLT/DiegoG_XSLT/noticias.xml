@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="noticias_json.xsl" type="text/xsl"?>
+<portal>
+    <noticia importancia="alta" vistas="1520">
+        <titulo>Lanzado nuevo estándar XML</titulo>
+        <autoria>Juan Técnico</autoria>
+        <contenido>El W3C ha publicado una nueva recomendación...</contenido>
+    </noticia>
+    <noticia importancia="alta" vistas="340">
+        <titulo>VS Code actualiza su extensión para XML</titulo>
+        <autoria>Ana Debugger</autoria>
+        <contenido>Mejoras en el resaltado de sintaxis...</contenido>
+    </noticia>
+    <noticia importancia="media" vistas="980">
+        <titulo>XSLT cumple 25 años</titulo>
+        <autoria>Juan Técnico</autoria>
+        <contenido>Un repaso a la historia del lenguaje...</contenido>
+    </noticia>
+</portal>
