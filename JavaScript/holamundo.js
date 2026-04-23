@@ -15,6 +15,10 @@ function saludoo(name){
 const saludo = name => `hola ${name}`;
 const square = num => num*num;
 
+let nums = [1,2,3,4,5,6];
+
+
+
 alert(saludo("pepe"))
 alert(square(4))
 

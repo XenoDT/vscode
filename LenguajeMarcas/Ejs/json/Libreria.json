@@ -1,0 +1,36 @@
+{
+  "libreria": "Librería Central",
+  "inventario": [
+    {
+      "id": "LIB-001",
+      "titulo": "Cien años de soledad",
+      "autor": "Gabriel García Márquez",
+      "genero": "Realismo mágico",
+      "precio": 19.95,
+      "stock": 15,
+      "formato": "Tapa blanda"
+    },
+    {
+      "id": "LIB-002",
+      "titulo": "Aprende Python en un fin de semana",
+      "autor": "A. García",
+      "categoria": "Informática",
+      "precio": 25.00,
+      "detalles_tecnicos": {
+        "paginas": 300,
+        "nivel": "Principiante",
+        "incluye_codigo_qr": true
+      },
+      "capitulos": ["Introducción", "Variables", "Bucles", "Listas"]
+    },
+    {
+      "id": "LIB-003",
+      "titulo": "Quijote de la Mancha (Edición Coleccionista)",
+      "autor": "Miguel de Cervantes",
+      "anio_edicion": 1890,
+      "precio": 450.00,
+      "estado": "Anticuario",
+      "notas_curador": "Portada de cuero original, desgaste leve en lomo."
+    }
+  ]
+}
