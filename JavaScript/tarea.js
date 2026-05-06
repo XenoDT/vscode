@@ -6,27 +6,39 @@ que devuela el arrat con las modificaciones u otra cosa
 const input = document.getElementById('numInput');
 const boton = document.getElementById('btnAgregar');
 const lista = document.getElementById('listarNums');
-
+let palabras = [];
 function agregarNumero() {
     const texto = input.value.trim();
     if(texto == ""){
         alert("INTRODUZCA UNA PALABRA");
         return;
     }
-
+    palabras.push(texto)
+    const lengtha = nombreee(palabras);
+    const lastLengtha = lengtha[lengtha.length - 1];
     const nuevoNumero = document.createElement('li');
-
-    agregarNumero.innerHTML = `
-        <span>${texto}</span>
-        <buton class="btn-eliminar">Eliminar</button>
+    if (lastLengtha == 67){
+        nuevoNumero.innerHTML = `
+        <span>RETRASADO</span>
+        <button class="btn-eliminar">Eliminar</button>
     `;
-    // agregarNumero.querySelector('span').addEventListener('click', function() {
-    //     this.classList.toggle('completada');
-    // });
-    // agregarNumero.querySelector('.btn-eliminar').addEventListener('click', () => {
-    //     nuevaTarea.remove();
-    //});
-    lista.appendChild(agregarNumero);
+    }else if( lastLengtha == 69){
+        nuevoNumero.innerHTML = `
+        <span>Salido</span>
+        <button class="btn-eliminar">Eliminar</button>`
+    } else{
+    nuevoNumero.innerHTML = `
+        <span>${lastLengtha}</span>
+        <button class="btn-eliminar">Eliminar</button>
+    `;
+    }
+    nuevoNumero.querySelector('span').addEventListener('click', function() {
+        this.classList.toggle('completada');
+    });
+    nuevoNumero.querySelector('.btn-eliminar').addEventListener('click', () => {
+        nuevoNumero.remove();
+    });
+    lista.appendChild(nuevoNumero);
     input.value = "";
     input.focus();
 }
@@ -38,16 +50,4 @@ input.addEventListener('keypress', (e) => {
 }) 
 
 let nums = [];
-const name = prompt("Introduce una palabra")
-alert(name)
-const nombreee = (name) => {
-    let a = name.length
-    nums.push(a)
-    return;
-}
-
-nombreee(name)
-
-
-
-alert(nums)
+const nombreee = arr => arr.map( p => p.length);
