@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios DOM</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 6px 10px;
+      margin: 5px;
+    }
+
+    .resaltado {
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    .tachado {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .grande {
+      font-size: 2em;
+    }
+
+    .rojo {
+      color: red;
+    }
+
+    .verde {
+      color: green;
+    }
+
+    .azul {
+      color: steelblue;
+    }
+
+    #caja-hover {
+      width: 200px;
+      height: 80px;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+  <script src="ejs_dom.js" defer></script>
+</head>
+
+<body>
+
+  <h1>Ejercicios JavaScript — DOM</h1>
+
+  <!-- =============================================
+       SECCIÓN 1 — CONTENIDO
+  ============================================= -->
+  <section>
+    <h2>1. Modificar contenido</h2>
+
+    <p id="saludo">Hola, mundo.</p>
+    <p id="mensaje">Este párrafo contiene <em>texto con etiquetas</em>.</p>
+    <p id="contador">0</p>
+
+    <button id="btn-saludo">Cambiar saludo</button>
+    <button id="btn-mensaje">Poner en negrita</button>
+    <button id="btn-subir">+1 al contador</button>
+    <button id="btn-bajar">-1 al contador</button>
+  </section>
+
+
+  <!-- =============================================
+       SECCIÓN 2 — ATRIBUTOS
+  ============================================= -->
+  <section>
+    <h2>2. Modificar atributos</h2>
+
+    <a id="enlace" href="https://www.google.es" target="_blank">Ir a Google</a>
+    <br><br>
+    <img id="imagen" src="https://picsum.photos/200/100?random=1" alt="imagen aleatoria">
+    <br><br>
+    <button id="btn-enlace">Cambiar enlace a Wikipedia</button>
+    <button id="btn-imagen">Cambiar imagen</button>
+    <button id="btn-alt">Leer atributo alt en consola</button>
+  </section>
+
+
+  <!-- =============================================
+       SECCIÓN 3 — CLASES
+  ============================================= -->
+  <section>
+    <h2>3. Clases con classList</h2>
+
+    <p id="texto-clases">Este texto cambia de estilo con classList.</p>
+
+    <button id="btn-add">Añadir "resaltado"</button>
+    <button id="btn-remove">Quitar "resaltado"</button>
+    <button id="btn-toggle">Toggle "tachado"</button>
+    <button id="btn-grande">Toggle "grande"</button>
+    <button id="btn-color">Rotar color (rojo → verde → azul)</button>
+    <button id="btn-ver">Ver clases en consola</button>
+  </section>
+
+
+  <!-- =============================================
+       SECCIÓN 4 — EVENTOS DE RATÓN
+  ============================================= -->
+  <section>
+    <h2>4. Eventos de ratón</h2>
+
+    <p id="info-clic">Haz clic, doble clic o clic derecho aquí.</p>
+    <div id="caja-hover">Pasa el ratón por aquí</div>
+  </section>
+
+
+  <!-- =============================================
+       SECCIÓN 5 — INPUTS Y FORMULARIO
+  ============================================= -->
+  <section>
+    <h2>5. Inputs y eventos de teclado / foco</h2>
+
+    <input type="text" id="campo-nombre" placeholder="Escribe tu nombre">
+    <button id="btn-saludar">Saludar</button>
+    <p id="resultado-saludo"></p>
+
+    <br>
+    <input type="text" id="campo-vivo" placeholder="Escribe algo...">
+    <p id="eco"></p>
+
+    <br>
+    <input type="number" id="num1" placeholder="Número 1" style="width:100px">
+    <input type="number" id="num2" placeholder="Número 2" style="width:100px">
+    <button id="btn-sumar">Sumar</button>
+    <p id="resultado-suma"></p>
+  </section>
+
+
+  <!-- =============================================
+       SECCIÓN 6 — LISTA DINÁMICA
+  ============================================= -->
+  <section>
+    <h2>6. Lista dinámica</h2>
+
+    <input type="text" id="campo-item" placeholder="Nuevo elemento">
+    <button id="btn-agregar">Agregar</button>
+    <button id="btn-borrar-ultimo">Borrar último</button>
+    <ul id="mi-lista">
+      <li>Elemento inicial</li>
+    </ul>
+    <p><small>💡 Doble clic sobre un elemento para eliminarlo.</small></p>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+
+    // ==============================================
+    // SECCIÓN 1 — MODIFICAR CONTENIDO
+    // ==============================================
+
+    // EJERCICIO 1.1
+    // Al hacer clic en "Cambiar saludo", cambia el texto del párrafo #saludo
+    // por "¡Hola, JavaScript!" usando textContent.
+    // Pista: document.getElementById(...)
+
+
+    // EJERCICIO 1.2
+    // Al hacer clic en "Poner en negrita", haz que el texto del párrafo #mensaje
+    // se muestre en negrita usando innerHTML.
+    // El resultado debe verse: "Este párrafo contiene <strong>texto con etiquetas</strong>."
+
+
+    // EJERCICIO 1.3
+    // Los botones "+1" y "-1" deben incrementar y decrementar el valor del párrafo #contador.
+    // Recuerda que textContent devuelve un string: conviértelo a número con parseInt() o Number().
+
+
+    // ==============================================
+    // SECCIÓN 2 — ATRIBUTOS
+    // ==============================================
+
+    // EJERCICIO 2.1
+    // Al hacer clic en "Cambiar enlace a Wikipedia", modifica el href del enlace #enlace
+    // para que apunte a https://www.wikipedia.org y cambia su texto a "Ir a Wikipedia".
+    // Pista: element.setAttribute(...) o element.href = ...
+
+
+    // EJERCICIO 2.2
+    // Al hacer clic en "Cambiar imagen", modifica el src de #imagen para mostrar
+    // otra foto aleatoria de picsum: https://picsum.photos/200/100?random=2
+
+
+    // EJERCICIO 2.3
+    // Al hacer clic en "Leer atributo alt en consola", muestra en consola
+    // el valor del atributo alt de la imagen.
+    // Pista: element.getAttribute(...)
+
+
+    // ==============================================
+    // SECCIÓN 3 — CLASES
+    // ==============================================
+
+    // EJERCICIO 3.1
+    // "Añadir resaltado": añade la clase "resaltado" al párrafo #texto-clases.
+    // Usa classList.add(...)
+
+
+    // EJERCICIO 3.2
+    // "Quitar resaltado": quita la clase "resaltado" del párrafo #texto-clases.
+    // Usa classList.remove(...)
+
+
+    // EJERCICIO 3.3
+    // "Toggle tachado": activa/desactiva la clase "tachado" con cada clic.
+    // Usa classList.toggle(...)
+
+
+    // EJERCICIO 3.4
+    // "Toggle grande": activa/desactiva la clase "grande" con cada clic.
+
+
+    // EJERCICIO 3.5
+    // "Rotar color": cada clic debe cambiar el color del texto en este orden:
+    // sin color → rojo → verde → azul → sin color → ...
+    // Pista: usa classList.contains() para saber qué clase tiene,
+    // o guarda el estado en una variable externa.
+
+
+    // EJERCICIO 3.6
+    // "Ver clases en consola": muestra en consola todas las clases actuales
+    // del párrafo #texto-clases.
+    // Pista: classList es iterable, o usa classList.toString()
+
+
+    // ==============================================
+    // SECCIÓN 4 — EVENTOS DE RATÓN
+    // ==============================================
+
+    // EJERCICIO 4.1
+    // Añade un listener de "click" al párrafo #info-clic.
+    // Cada clic debe cambiar su texto a "¡Clic detectado!" y añadirle la clase "resaltado".
+
+
+    // EJERCICIO 4.2
+    // Añade un listener de "dblclick" al mismo párrafo.
+    // Al hacer doble clic, su texto debe volver al original y quitarle todas las clases.
+    // Pista: className = "" borra todas las clases a la vez.
+
+
+    // EJERCICIO 4.3
+    // Añade un listener de "contextmenu" (clic derecho) al párrafo.
+    // Muestra en consola "Clic derecho detectado" y cancela el menú contextual del navegador.
+    // Pista: event.preventDefault()
+
+
+    // EJERCICIO 4.4
+    // Sobre la caja #caja-hover:
+    // - Al pasar el ratón por encima (mouseenter), cambia su fondo a "lightblue" y el texto a "¡Dentro!".
+    // - Al sacar el ratón (mouseleave), restaura el fondo a "#eee" y el texto a "Pasa el ratón por aquí".
+    // Usa classList o style, como prefieras.
+
+
+    // ==============================================
+    // SECCIÓN 5 — INPUTS Y EVENTOS DE TECLADO / FOCO
+    // ==============================================
+
+    // EJERCICIO 5.1
+    // Al hacer clic en "Saludar", lee el valor del input #campo-nombre
+    // y escribe en #resultado-saludo: "¡Hola, [nombre]!"
+    // Si el input está vacío, escribe: "Por favor, escribe tu nombre."
+    // Pista: input.value
+
+
+    // EJERCICIO 5.2
+    // El input #campo-vivo debe mostrar en tiempo real (evento "input")
+    // lo que el usuario escribe, reflejándolo en el párrafo #eco.
+    // Ejemplo: mientras escribes "casa", #eco muestra "casa".
+
+
+    // EJERCICIO 5.3
+    // Al hacer clic en "Sumar", lee los valores de #num1 y #num2,
+    // súmalos como números y muestra el resultado en #resultado-suma.
+    // Si algún campo está vacío, muestra "Introduce los dos números."
+
+
+    // EJERCICIO 5.4 — EXTRA
+    // Añade eventos "focus" y "blur" al input #campo-nombre:
+    // - Al recibir el foco, ponle un borde de color (puedes usar classList o style).
+    // - Al perder el foco, quítalo.
+
+
+    // ==============================================
+    // SECCIÓN 6 — LISTA DINÁMICA
+    // ==============================================
+
+    // EJERCICIO 6.1
+    // Al hacer clic en "Agregar", crea un nuevo <li> con el texto del input #campo-item
+    // y añádelo al final de #mi-lista.
+    // Si el input está vacío, no hagas nada.
+    // Vacía el input después de agregar.
+
+
+    // EJERCICIO 6.2
+    // Al hacer clic en "Borrar último", elimina el último <li> de la lista.
+    // Pista: lista.lastElementChild
+
+
+    // EJERCICIO 6.3
+    // Añade un listener de "dblclick" a #mi-lista (no a cada <li>).
+    // Al hacer doble clic sobre un <li>, elimínalo.
+    // Pista: event.target.closest("li") y .remove()
+
+
+    // EJERCICIO 6.4 — EXTRA
+    // Modifica el ejercicio 6.1 para que también funcione pulsando Enter en el input,
+    // además del botón. Usa el evento "keydown" y comprueba event.key === "Enter".

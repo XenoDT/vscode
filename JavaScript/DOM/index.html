@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica DOM</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1 id="titulo-ppal">Bienvenidos a la clase</h1>
+    <nav>
+      <a href="#" id="enlace-inicio">Inicio</a>
+      <a href="#" id="enlace-info">Información</a>
+      <a href="#" id="enlace-contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SECCIÓN: texto e imagen -->
+    <section id="seccion-intro">
+      <h2 id="subtitulo">Introducción</h2>
+      <p id="parrafo-intro">
+        Este es un párrafo de introducción. Aquí podemos modificar el contenido,
+        los atributos y las clases con JavaScript.
+      </p>
+      <img id="imagen-principal" src="https://picsum.photos/id/10/400/200" alt="Paisaje de montaña" width="400">
+    </section>
+
+    <!-- SECCIÓN: lista -->
+    <section id="seccion-lista">
+      <h2>Lista de elementos</h2>
+      <ul id="mi-lista">
+        <li id="item-1" class="item">Manzana</li>
+        <li id="item-2" class="item">Naranja</li>
+        <li id="item-3" class="item activo">Plátano</li>
+        <li id="item-4" class="item">Fresa</li>
+      </ul>
+    </section>
+
+    <!-- SECCIÓN: tarjetas -->
+    <section id="seccion-tarjetas">
+      <h2>Tarjetas</h2>
+      <div class="contenedor-tarjetas">
+        <article class="tarjeta" id="tarjeta-1">
+          <h3 class="tarjeta-titulo">Tarjeta 1</h3>
+          <p class="tarjeta-texto">Contenido de la primera tarjeta.</p>
+          <span class="etiqueta">nuevo</span>
+        </article>
+        <article class="tarjeta" id="tarjeta-2">
+          <h3 class="tarjeta-titulo">Tarjeta 2</h3>
+          <p class="tarjeta-texto">Contenido de la segunda tarjeta.</p>
+          <span class="etiqueta">destacado</span>
+        </article>
+        <article class="tarjeta" id="tarjeta-3">
+          <h3 class="tarjeta-titulo">Tarjeta 3</h3>
+          <p class="tarjeta-texto">Contenido de la tercera tarjeta.</p>
+          <span class="etiqueta">oferta</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: formulario -->
+    <section id="seccion-form">
+      <h2>Formulario de contacto</h2>
+      <form id="formulario" novalidate>
+        <label for="campo-nombre" id="label-nombre">Nombre:</label>
+        <input type="text" id="campo-nombre" name="nombre" placeholder="Tu nombre">
+
+        <label for="campo-email">Email:</label>
+        <input type="email" id="campo-email" name="email" placeholder="tu@email.com">
+
+        <label for="campo-mensaje">Mensaje:</label>
+        <textarea id="campo-mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+
+        <button type="button" id="btn-enviar">Enviar</button>
+        <button type="button" id="btn-limpiar">Limpiar</button>
+      </form>
+      <p id="respuesta-form"></p>
+    </section>
+
+  </main>
+
+  <footer id="pie">
+    <p id="texto-footer">© 2025 — Práctica DOM con JavaScript</p>
+  </footer>
+
+</body>
+
+</html>
